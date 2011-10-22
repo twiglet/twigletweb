@@ -4,10 +4,14 @@ DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 
 ADMINS = (
-    # ('Your Name', 'your_email@domain.com'),
+    ('Kevin Glynn', 'admin@twigletsoftware.com'),
 )
 
 MANAGERS = ADMINS
+
+SEND_BROKEN_LINK_EMAILS = True
+
+SERVER_EMAIL = "website.error@twigletsoftware.com"
 
 DATABASES = {
     'default': {
@@ -27,7 +31,7 @@ DATABASES = {
 # timezone as the operating system.
 # If running in a Windows environment this must be set to the same as your
 # system time zone.
-TIME_ZONE = 'America/Chicago'
+TIME_ZONE = 'Europe/Brussels'
 
 # Language code for this installation. All choices can be found here:
 # http://www.i18nguy.com/unicode/language-identifiers.html
@@ -81,6 +85,7 @@ TEMPLATE_DIRS = (
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
+    "/home/kevingdevel/stage.twigletsoftware.com/twiglet/templates",
 )
 
 INSTALLED_APPS = (
@@ -92,4 +97,14 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     # Uncomment the next line to enable the admin:
     # 'django.contrib.admin',
+    'twiglet',
 )
+
+## twiglet settings
+TWIGLET_ASSETS_DIRS = (
+    "/home/kevingdevel/stage.twigletsoftware.com/twiglet/assets"
+    )
+
+TWIGLET_TRIAL_DIR = "/home/kevingdevel/stage.twigletsoftware.com/assets/cs2j/trial"
+TWIGLET_SHOWCASE_DIR = "/home/kevingdevel/stage.twigletsoftware.com/assets/cs2j/showcase"
+
