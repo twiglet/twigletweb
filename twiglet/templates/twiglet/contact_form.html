@@ -1,0 +1,65 @@
+{% extends "twiglet/base_generic.html" %}
+
+{% block loadscriptfiles %}
+<script type="text/javascript" src="/static/twiglet/js/jquery.validate-1.8.1.min.js"></script>
+{% endblock%}
+
+{% block jquery %}
+<script>
+  $(document).ready(function(){
+    $("label:not(.error)").append(":");
+    $("#contactForm").validate();
+  });
+</script>
+{% endblock %}
+
+{% block title %}Contact us{% endblock title %}
+
+{% block body %}
+
+<!-- <div id="container"> -->
+
+<form class="contactform" id="contactform" method="post" action="">
+  {% csrf_token %}
+  <fieldset>
+   <h2><legend>Contact us</legend></h2>
+   <p>
+     <label for="cname">Name</label>
+     {{ form.name }}
+     {% for error in form.name.errors %}
+        <label for="id_name" generated="true" class="error">{{ error|escape }}</label>
+     {% endfor %}
+ </p>
+   <p>
+     <label for="cemail">Email</label>
+     {{ form.email }}
+     {% for error in form.email.errors %}
+        <label for="id_email" generated="true" class="error">{{ error|escape }}</label>
+     {% endfor %}
+ </p>
+   <p>
+    <label for="ccomment">Your comment</label><br />
+     {{ form.comment }}
+     {% for error in form.comment.errors %}
+        <label for="id_comment" generated="true" class="error">{{ error|escape }}</label>
+     {% endfor %}
+  </p>
+   <p>
+     <input class="submit" type="submit" value="Submit"/>
+   </p>
+ </fieldset>
+ </form>
+
+<div id="altcontacts">
+  <h2>Email</h2> 
+ <p>Or you can contact us by email at <a href="mailto:info@twigletsoftware.com">info@twigletsoftware.com</a></p> 
+  <h2>Skype</h2> 
+ <p>Or you can contact me through Skype. My skype name is <a href="skype:kevin.glynn">kevin.glynn</a></p> 
+</div>
+
+<!-- <div class"clear"></div> -->
+
+<!-- </div> -->
+{% endblock body %}
+
+

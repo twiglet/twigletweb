@@ -1,0 +1,140 @@
+{% extends "twiglet/base_generic.html" %}
+
+{% block loadscriptfiles %}
+<script type="text/javascript" src="/static/twiglet/js/jquery.cookie.js"></script>
+<script type="text/javascript" src="/static/twiglet/js/jstree_pre1.0_stable/jquery.jstree.js"></script>
+<script type="text/javascript" src="/static/twiglet/js/jquery.interstitial.min.js"></script>
+{% endblock %}
+{% block loadstylefiles %}
+<link rel="stylesheet" type="text/css" media="all" href="/static/twiglet/css/pygments.css"/>
+<link href="/static/twiglet/css/jquery.interstitial.css" rel="stylesheet" type="text/css" />
+{% endblock %}
+
+{% block jquery %}
+<script>
+
+function customMenu(node) {
+    // folder
+    if ($(node).hasClass("folder")) {
+      return {
+        downloadItem: { 
+            label: "Download (as zip)",
+            icon: "/static/twiglet/images/disk.png",
+            action: function (click_node)
+              {
+                 project = $("a",click_node).attr("project");
+                 fname = $("a",click_node).attr("fname");
+                 base = "{% url twiglet.views.util_download 'PROJECT' 'FNAME' %}";
+                 url = base.replace('PROJECT', project).replace('FNAME', fname);
+                 window.location=url;
+             }
+        }
+     };
+    }
+  else { // leaf
+     return {
+        downloadItem: { 
+            label: "Download",
+            icon: "/static/twiglet/images/disk.png",
+            action: function (click_node)
+              {
+                 project = $("a",click_node).attr("project");
+                 fname = $("a",click_node).attr("fname");
+                 base = "{% url twiglet.views.util_download 'PROJECT' 'FNAME' %}";
+                 url = base.replace('PROJECT', project).replace('FNAME', fname);
+                 window.location=url;
+             }
+        },
+        rawViewItem: { 
+            label: "View without formatting",
+            icon: "/static/twiglet/images/text_align_left.png",
+            action: function (click_node)
+              {
+                 project = $("a",click_node).attr("project");
+                 fname = $("a",click_node).attr("fname");
+                 base = "{% url twiglet.views.util_display_code 'plain' 'PROJECT' 'FNAME' %}";
+                 url = base.replace('PROJECT', project).replace('FNAME', fname);
+                 window.open(url);
+             }
+        }
+     };
+    }
+}
+
+  $(document).ready(function(){
+   {% if csharp_tree_json %}
+     $("#csharp_tree").jstree(
+         { json_data : { data : {{ csharp_tree_json|safe }} },
+	   plugins : [ "themes", "json_data", "cookies", "contextmenu"],
+           core : { animation : 200, initially_open : ["csnode_1"] },
+           cookies : { prefix : "tree1", opts : { path : "/" } },
+           contextmenu : { items : customMenu, show_at_node : false }
+       });
+   {% endif %}
+   {% if java_tree_json %}
+    $("#java_tree").jstree(
+         { json_data : { data : {{ java_tree_json|safe }} },
+	   plugins : [ "themes", "json_data", "cookies", "contextmenu"],
+           core : { animation : 200, initially_open : ["jnode_1"] },
+           cookies : { prefix : "tree1", opts : { path : "/" } },
+           contextmenu : { items : customMenu, show_at_node : false }
+       });
+    {% endif %}
+    $("div.dirtree").delegate("a","click", function (e) { 
+         if ($(this).hasClass('folder')) {  // is the node clicked a folder?
+            // $("div.dirtree").jstree("toggle_node", this);
+             $.jstree._reference(this).toggle_node(this);
+             e.preventDefault(); 
+             return false;
+         }
+      });
+});
+
+$(document).ready(function(){
+           $("button").click(function () { 
+                               $(this).interstitial('open', {'url' : $(this).attr('href'),
+                                                             'width' : 500, 
+                                                             'height' : 200});
+                             })
+         });
+
+</script>
+
+{% endblock %}
+
+{% block body %}
+
+<div class="block_header">
+{% block showcasedescription %}
+  Write here about all the cool stuff shown off by this show case / case study.
+{% endblock %}
+</div>
+
+<div class="codetreewrapper outline">
+
+<div class="kgcontainer">
+
+  <div id="csharp_tree" class="leftcolumntwo dirtree">
+  </div>
+
+  <div id="java_tree" class="rightcolumntwo dirtree">
+  </div>
+
+</div>
+
+
+<div align="right">
+<button type="button" class="popup" href="{% url twiglet.views.showcase_no_license %}">copying</button>
+<button type="button" class="popup" href="{% url twiglet.views.showcase_dirtree_help %}">help</button>
+</div>
+</div>
+
+<div class="block_bottom contactmsg">
+  <a href="{% url twiglet.views.contact %}">Contact us</a> about our
+  conversion services, or to license CS2J. We look forward to working
+  with you.
+</div>
+  
+
+{% endblock body %}
+

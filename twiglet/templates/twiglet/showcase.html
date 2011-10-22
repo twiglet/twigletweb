@@ -1,0 +1,67 @@
+{% extends "twiglet/base_generic.html" %}
+
+{% block body %}
+
+<!-- <div class="block_header">
+  Here goes header.
+</div>
+-->
+<div id="showcase">
+<div class="kgcontainer">
+<div class="leftcolumntwo">
+<div class="padit">
+  <div class="button" target="{% url twiglet.views.showcase_helloworld %}">
+    <div class="buttonfiller">
+      This is our Hello World sampler. The C# code is straightforward,
+      but CS2J effortlessly takes care of dozens of details and produces natural
+      looking Java source code.
+    </div>
+  </div>
+</div>
+</div>
+</div>
+
+<div class="kgcontainer">
+<div class="rightcolumntwo">
+<div class="padit">
+  <div class="button" target="{% url twiglet.views.showcase_generics %}">
+    <div class="buttonfiller">
+  See how we translate generic classes.
+    </div>
+  </div>
+</div>
+</div>
+</div>
+
+<div class="kgcontainer">
+<div class="leftcolumntwo">
+<div class="padit">
+  <div class="button" target="{% url twiglet.views.showcase_rustici %}">
+    <div class="buttonfiller">
+  Case Study: Rustici Software's SCORM Engine and SCORM Cloud.
+    </div>
+  </div>
+</div>
+</div>
+</div>
+
+<div class="kgcontainer">
+<div class="rightcolumntwo">
+<div class="padit">
+  <div class="button" target="{% url twiglet.views.showcase_generics %}">
+    <div class="buttonfiller">
+  CS2J supports Delegates and Events.
+    </div>
+  </div>
+</div>
+</div>
+</div>
+
+</div>
+
+<div class="block_bottom checkback">
+  Check back later for more showcases and more case studies.
+</div>
+  
+
+{% endblock body %}

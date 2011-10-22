@@ -1,0 +1,401 @@
+{% extends "twiglet/base_generic.html" %}
+
+{% block title %}C# feature support by CS2J{% endblock %}
+
+{% block body %}
+
+<div class="block_header">
+<p>
+  The following table lists C# features and describes the ability of CS2J to
+  translate them.  The table is not exhaustive and we are improving
+  our support for C# all the time. 
+<p>
+  <a href="{% url
+  twiglet.views.contact %}">Contact us</a> for up to date information.
+
+</div>
+
+<div class="kgcontainer">
+
+<div class="base-layer">
+   {% comment %}
+<h4 class="table-caption"> 
+    First 5 year Nobel prize winners in physics
+  </h4>
+   {% endcomment %}
+
+<div class="table-row"> 
+<div class="left-container13"><span class="colhdr"> 
+        Feature
+      </span></div> 
+<div class="left-container23"><span class="colhdr"> 
+        Support
+      </span></div> 
+<div class="right-container13"><span class="colhdr"> 
+        Comments
+      </span></div> 
+<div class="space-line"></div> 
+</div> 
+
+<div class="table-row"> 
+<div class="left-container13"><p class="text"> 
+        Namespaces
+      </p></div> 
+<div class="left-container23"><p class="text"> 
+        Yes
+      </p></div> 
+<div class="right-container13"><p class="text"> 
+Namespaces become Java Packages. Top level C# types are written to
+  individual Java files according to Java conventions (directory and
+  file name is taken from package and type name)  
+      </p></div> 
+<div class="space-line"></div> 
+</div> 
+
+<div class="table-row"> 
+<div class="left-container13"><p class="text"> 
+        Namespace Aliases
+      </p></div> 
+<div class="left-container23"><p class="text"> 
+        Soon
+      </p></div> 
+<div class="right-container13"><p class="text">
+  <code class="prettyprint">using colAlias = System.Collections;</code>
+     </p></div> 
+<div class="space-line"></div> 
+</div> 
+
+<div class="table-row"> 
+<div class="left-container13"><p class="text"> 
+        Comments
+      </p></div> 
+<div class="left-container23"><p class="text"> 
+        Yes
+      </p></div> 
+<div class="right-container13"><p class="text">
+  Comments are transferred from the C# source to the corresponding
+  place in the Java source
+     </p></div> 
+<div class="space-line"></div> 
+</div> 
+
+<div class="table-row"> 
+<div class="left-container13"><p class="text"> 
+        XML Document Comments
+      </p></div> 
+<div class="left-container23"><p class="text"> 
+        Yes
+      </p></div> 
+<div class="right-container13"><p class="text">
+  C# XML document comments are translated to Javadoc format
+     </p></div> 
+<div class="space-line"></div> 
+</div> 
+
+<div class="table-row"> 
+<div class="left-container13"><p class="text"> 
+        Annotations
+      </p></div> 
+<div class="left-container23"><p class="text"> 
+        Soon
+      </p></div> 
+<div class="right-container13"><p class="text">
+ 
+     </p></div> 
+<div class="space-line"></div> 
+</div> 
+
+<div class="table-row"> 
+<div class="left-container13"><p class="text"> 
+        Modifiers
+      </p></div> 
+<div class="left-container23"><p class="text"> 
+        Yes
+      </p></div> 
+<div class="right-container13"><p class="text">
+        Some modifiers (such as internal) do not have a direct
+  correspondence in Java
+     </p></div> 
+<div class="space-line"></div> 
+</div> 
+
+<div class="table-row"> 
+<div class="left-container13"><p class="text"> 
+        Verbatim strings
+      </p></div> 
+<div class="left-container23"><p class="text"> 
+        Yes
+      </p></div> 
+<div class="right-container13"><p class="text">
+        <code class="prettyprint">@"......"</code>
+     </p></div> 
+<div class="space-line"></div> 
+</div> 
+
+<div class="table-row"> 
+<div class="left-container13"><p class="text"> 
+        <code class="prettyprint">ref</code> and <code class="prettyprint">out</code> parameters
+      </p></div> 
+<div class="left-container23"><p class="text"> 
+        Yes
+      </p></div> 
+<div class="right-container13"><p class="text">
+        CS2J boxes and unboxes <code class="prettyprint">ref</code> and <code class="prettyprint">out</code> arguments automatically
+     </p></div> 
+<div class="space-line"></div> 
+</div> 
+
+<div class="table-row"> 
+<div class="left-container13"><p class="text"> 
+        Partial classes and methods
+      </p></div> 
+<div class="left-container23"><p class="text"> 
+        Yes
+      </p></div> 
+<div class="right-container13"><p class="text">
+        All components of partial classes are collected into a single class
+     </p></div> 
+<div class="space-line"></div> 
+</div> 
+
+<div class="table-row"> 
+<div class="left-container13"><p class="text"> 
+        External aliases
+      </p></div> 
+<div class="left-container23"><p class="text"> 
+        Not yet
+      </p></div> 
+<div class="right-container13"><p class="text">
+        <code class="prettyprint">class TestClass : global::TestApp</code>
+     </p></div> 
+<div class="space-line"></div> 
+</div> 
+
+<div class="table-row"> 
+<div class="left-container13"><p class="text"> 
+        Nested Types
+      </p></div> 
+<div class="left-container23"><p class="text"> 
+        Yes
+      </p></div> 
+<div class="right-container13"><p class="text">
+        C# nested types map to static nested types in Java 
+     </p></div> 
+<div class="space-line"></div> 
+</div> 
+
+<div class="table-row"> 
+<div class="left-container13"><p class="text"> 
+        Delegates and Events
+      </p></div> 
+<div class="left-container23"><p class="text"> 
+        Yes
+      </p></div> 
+<div class="right-container13"><p class="text">
+        
+     </p></div> 
+<div class="space-line"></div> 
+</div> 
+
+<div class="table-row"> 
+<div class="left-container13"><p class="text"> 
+        Preprocessor directives
+      </p></div> 
+<div class="left-container23"><p class="text"> 
+        Yes
+      </p></div> 
+<div class="right-container13"><p class="text">
+        Conditional compilation is supported
+     </p></div> 
+<div class="space-line"></div> 
+</div> 
+
+<div class="table-row"> 
+<div class="left-container13"><p class="text"> 
+        Properties
+      </p></div> 
+<div class="left-container23"><p class="text"> 
+        Yes
+      </p></div> 
+<div class="right-container13"><p class="text">
+        Translated into getter and setter methods
+     </p></div> 
+<div class="space-line"></div> 
+</div> 
+
+<div class="table-row"> 
+<div class="left-container13"><p class="text"> 
+        Indexers
+      </p></div> 
+<div class="left-container23"><p class="text"> 
+        Yes
+      </p></div> 
+<div class="right-container13"><p class="text">
+        Translated to methods
+     </p></div> 
+<div class="space-line"></div> 
+</div> 
+
+<div class="table-row"> 
+<div class="left-container13"><p class="text"> 
+        Structs
+      </p></div> 
+<div class="left-container23"><p class="text"> 
+        Yes
+      </p></div> 
+<div class="right-container13"><p class="text">
+        Translated into classes.  This may affect the semantics since
+  classes are passed by reference, not value
+     </p></div> 
+<div class="space-line"></div> 
+</div> 
+
+<div class="table-row"> 
+<div class="left-container13"><p class="text"> 
+        Implicit types (<code class="prettyprint">var</code>)
+      </p></div> 
+<div class="left-container23"><p class="text"> 
+        Yes
+      </p></div> 
+<div class="right-container13"><p class="text">
+        In cases where CS2J knows the type
+     </p></div> 
+<div class="space-line"></div> 
+</div>
+
+
+<div class="table-row"> 
+<div class="left-container13"><p class="text"> 
+        Anonymous Functions
+      </p></div> 
+<div class="left-container23"><p class="text"> 
+        Yes
+      </p></div> 
+<div class="right-container13"><p class="text">
+        Translated as a delegate to an object with anonymous class
+     </p></div> 
+<div class="space-line"></div> 
+</div> 
+
+<div class="table-row"> 
+<div class="left-container13"><p class="text"> 
+        <code class="prettyprint">foreach</code>
+      </p></div> 
+<div class="left-container23"><p class="text"> 
+        Yes
+      </p></div> 
+<div class="right-container13"><p class="text">
+     </p></div> 
+<div class="space-line"></div> 
+</div> 
+
+<div class="table-row"> 
+<div class="left-container13"><p class="text"> 
+        <code class="prettyprint">switch</code>
+      </p></div> 
+<div class="left-container23"><p class="text"> 
+        Yes
+      </p></div> 
+<div class="right-container13"><p class="text">
+  In some cases (such as when the scrutinee expression is a string)
+  switch statements are converted to an equivalent <code
+  class="prettyprint">if-then-else</code> statement
+     </p></div> 
+<div class="space-line"></div> 
+</div> 
+
+<div class="table-row"> 
+<div class="left-container13"><p class="text"> 
+        LINQ
+      </p></div> 
+<div class="left-container23"><p class="text"> 
+        Not yet
+      </p></div> 
+<div class="right-container13"><p class="text">
+    </p></div> 
+<div class="space-line"></div> 
+</div> 
+
+<div class="table-row"> 
+<div class="left-container13"><p class="text"> 
+        <code class="prettyprint">yield</code>
+      </p></div> 
+<div class="left-container23"><p class="text"> 
+        Not yet
+      </p></div> 
+<div class="right-container13"><p class="text">
+    </p></div> 
+<div class="space-line"></div> 
+</div> 
+
+<div class="table-row"> 
+<div class="left-container13"><p class="text"> 
+        Nullable types
+      </p></div> 
+<div class="left-container23"><p class="text"> 
+        Not yet
+      </p></div> 
+<div class="right-container13"><p class="text">
+    </p></div> 
+<div class="space-line"></div> 
+</div> 
+
+<div class="table-row"> 
+<div class="left-container13"><p class="text"> 
+       Unsafe code
+      </p></div> 
+<div class="left-container23"><p class="text"> 
+        No
+      </p></div> 
+<div class="right-container13"><p class="text">
+    </p></div> 
+<div class="space-line"></div> 
+</div> 
+
+<div class="table-row"> 
+<div class="left-container13"><p class="text"> 
+       <code class="prettyprint">checked</code>, <code class="prettyprint">stackalloc</code>
+      </p></div> 
+<div class="left-container23"><p class="text"> 
+        No
+      </p></div> 
+<div class="right-container13"><p class="text">
+    </p></div> 
+<div class="space-line"></div> 
+</div> 
+
+<div class="table-row"> 
+<div class="left-container13"><p class="text"> 
+       Member hiding (<code
+  class="prettyprint">new</code> modifier)
+      </p></div> 
+<div class="left-container23"><p class="text"> 
+        No
+      </p></div> 
+<div class="right-container13"><p class="text">
+    </p></div> 
+<div class="space-line"></div> 
+</div> 
+
+
+{% comment %}
+<h4 class="table-caption"> 
+    This list could be made longer of course
+  </h4>
+{% endcomment %}
+</div> 
+
+</div>
+<div class="block_bottom contactmsg">
+<!--  <a href="{% url twiglet.views.contact %}">Contact us</a> about our
+  conversion services, or to license CS2J. We are looking forward to
+  working with you.
+  -->
+</div>
+
+{% endblock body %}
+
+
+
+
+-->

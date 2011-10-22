@@ -1,0 +1,91 @@
+{% extends "twiglet/base_generic.html" %}
+
+{% block loadscriptfiles %}
+<script type="text/javascript" src="/static/twiglet/js/jquery.cookie.js"></script>
+<script type="text/javascript" src="/static/twiglet/js/jstree_pre1.0_stable/jquery.jstree.js"></script>
+{% endblock %}
+{% block loadstylefiles %}
+<link rel="stylesheet" type="text/css" media="all" href="/static/twiglet/css/pygments.css"/>
+{% endblock %}
+
+{% block jquery %}
+<script>
+
+function customMenu(node) {
+    // folder
+    if ($(node).hasClass("folder")) {
+      return {
+        downloadItem: { 
+            label: "Download (as zip)",
+            icon: "/static/twiglet/images/disk.png",
+            action: function (click_node)
+              {
+                 project = $("a",click_node).attr("project");
+                 fname = $("a",click_node).attr("fname");
+                 base = "{% url twiglet.views.util_download 'PROJECT' 'FNAME' %}";
+                 url = base.replace('PROJECT', project).replace('FNAME', fname);
+                 window.location=url;
+             }
+        }
+     };
+    }
+  else { // leaf
+     return {
+        downloadItem: { 
+            label: "Download",
+            icon: "/static/twiglet/images/disk.png",
+            action: function (click_node)
+              {
+                 project = $("a",click_node).attr("project");
+                 fname = $("a",click_node).attr("fname");
+                 base = "{% url twiglet.views.util_download 'PROJECT' 'FNAME' %}";
+                 url = base.replace('PROJECT', project).replace('FNAME', fname);
+                 window.location=url;
+             }
+        },
+        rawViewItem: { 
+            label: "View without formatting",
+            icon: "/static/twiglet/images/text_align_left.png",
+            action: function (click_node)
+              {
+                 project = $("a",click_node).attr("project");
+                 fname = $("a",click_node).attr("fname");
+                 base = "{% url twiglet.views.util_display_code 'plain' 'PROJECT' 'FNAME' %}";
+                 url = base.replace('PROJECT', project).replace('FNAME', fname);
+                 window.open(url);
+             }
+        }
+     };
+    }
+}
+
+  $(document).ready(function(){
+     $("#dirtree1").jstree(
+         { json_data : { data : {{ tree_json|safe }} },
+	   plugins : [ "themes", "json_data", "cookies", "contextmenu"],
+           core : { animation : 200 },
+           cookies : { prefix : "tree1", opts : { path : "/" } },
+           contextmenu : { items : customMenu, show_at_node : false }
+       });
+     $("#dirtree1").delegate("a","click", function (e) { 
+         if ($(this).hasClass('folder')) {  // is the node clicked a folder?
+             $("#dirtree1").jstree("toggle_node", this); 
+             e.preventDefault(); 
+             return false;
+         }
+      });
+});
+</script>
+
+{% endblock %}
+
+{% block title %}Display Tree{% endblock title %}
+
+{% block body %}
+
+<div id="dirtree1">
+</div>
+
+{% endblock body %}
+
+

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<!-- <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN"> -->
+<html>
+
+<head>
+
+<meta name='robots' content='noindex,nofollow' />
+<link rel="shortcut icon" href="http://devel.twigletsoftware.com/favicon.ico" />
+<script type="text/javascript" src="/static/twiglet/js/jquery-1.6.1.min.js"></script>
+<script type="text/javascript" src="/static/twiglet/js/prettify.js"></script>
+{% block loadscriptfiles %}{% endblock%}
+
+<title>{% block title %}Twiglet Software{% endblock %}</title>
+<link rel="stylesheet" type="text/css" media="all" href="/static/twiglet/css/main.css"/>
+<link rel="stylesheet" type="text/css" href="/static/twiglet/css/prettify.css"/>
+{% block loadstylefiles %}{% endblock%}
+
+<script>
+  $(document).ready(function(){
+     // add class current_page_item to menu item for this page
+    //alert(window.location.pathname);
+    // grey out this page from access menu
+    $("#access li.page_item a[href='" + window.location.pathname + "']").parent().addClass("current_page_item"); 
+ });
+
+ $(document).ready(function(){
+    $(".button").click(function () { 
+         if ($(this).attr('target')) {  
+             window.location = $(this).attr('target');
+         }
+      });
+});
+</script>
+
+{% block jquery %} {% endblock %}
+
+{% block analytics %}
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-25770469-1']);
+  _gaq.push(['_setDomainName', 'twigletsoftware.com']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+{% endblock analytics %}
+
+</head>
+
+<body onload="prettyPrint()">
+<div id="wrapper">
+  <div id="header"> 
+   <div id="branding" role="banner"> 
+      <div id="site-title"> 
+        <span> 
+          <a href="/twiglet/" title="Twiglet Software" rel="home">Twiglet Software</a> 
+        </span> 
+      </div> 
+      <div id="site-description">CS2J: Convert C# to Java
+      </div> 
+      <img src="/static/twiglet/images/cropped-IMG_1993_2.jpg" width="940" height="150" alt="" /> 
+    </div><!-- #branding --> 
+                                
+    <div id="access" role="navigation"> 
+      <div class="skip-link screen-reader-text"><a href="#content" title="Skip to content">Skip to content</a></div> 
+      <div class="menu">
+        <ul>
+          <li class="page_item"><a href="/twiglet/" title="Home">Home</a></li>
+          <li class="page_item"><a href="/twiglet/how/" title="How CS2J Works">How CS2J Works</a></li>
+          <li class="page_item"><a href="/twiglet/showcase/" title="Showcase">Showcase</a></li>   
+          <li class="page_item"><a href="/twiglet/documentation/" title="Documentation">Documentation</a></li>
+          <li class="page_item"><a href="/twiglet/download/" title="Download CS2J Trial">Download CS2J Trial</a></li>
+          <li class="page_item"><a href="/twiglet/contact/" title="Contact">Contact</a></li>
+        </ul>
+      </div> 
+    </div><!-- #access --> 
+  </div><!-- #header --> 
+                                
+<div id="main"> 
+  <div id="content" role="main"> 
+
+      {% block body %}
+      Insert body here
+      {% endblock %}
+
+    <div id="bottombanner">
+
+      {% block bottom %}
+
+      <div class="kgcontainer">
+
+        <div align="center" class="leftcolumntwo">
+          <div class="green button" target="{% url twiglet.views.download %}">
+            <div class="buttonfiller">
+              Download a Trial Version
+            </div>
+          </div>
+        </div>
+
+        <div align="center" class="leftcolumntwo">
+          <div class="button green" target="{% url twiglet.views.contact %}">
+            <div class="buttonfiller">
+              Got Questions? Ask Us
+            </div>
+          </div>
+        </div>
+
+      </div>
+      {% endblock %}
+    </div>
+
+  </div>
+</div>
+
+<div id="footer" role="contentinfo"> 
+  <div id="colophon"> 
+    <div id="site-info"> 
+	<a href="{% url twiglet.views.home %}" title="CS2J: Convert C# to Java" rel="home">CS2J: Convert C# to Java</a> 
+    </div><!-- #site-info --> 
+   <div id="site-generator"> 
+     <a href="http://www.djangoproject.com/"><img src="http://media.djangoproject.com/img/badges/djangosite80x15.gif" border="0" alt="A Django site." title="A Django site." /></a>
+   </div><!-- #site-generator --> 
+ </div><!-- #colophon --> 
+</div><!-- #footer --> 
+ 
+</div>
+</body> </html>

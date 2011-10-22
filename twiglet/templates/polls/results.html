@@ -1,0 +1,19 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html> <head>
+<title></title>
+</head>
+
+<body>
+<h1>{{ object.question }}</h1>
+
+<ul>
+{% for choice in object.choice_set.all %}
+    <li>{{ choice.choice }} -- {{ choice.votes }} vote{{ choice.votes|pluralize }}</li>
+{% endfor %}
+</ul>
+
+<a href="/polls/{{ object.id }}/">Vote again?</a>
+
+<address></address>
+<!-- hhmts start -- Last modified: Thu Jun 16 10:29:33 CEST 2011 <!-- hhmts end -->
+</body> </html>

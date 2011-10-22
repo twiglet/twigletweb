@@ -1,0 +1,96 @@
+{% extends "twiglet/base_generic.html" %}
+
+{% block title %}CS2J Nuts 'n' Bolts{% endblock %}
+
+{% block body %}
+
+<div class="block_header">
+<h2>How CS2J Works</h2>
+<p>
+CS2J operates in two phases.  Phase 1 creates a translation repository
+for the application. The repository maps all the types (classes, enums,
+and so on) used by the application to translation templates.
+Phase 2 converts each C# file to Java classes, using the translation 
+repository to accurately convert the C# source to Java code.
+  
+<p>
+  <span style="font-weight:bold">Building the Translation Repository</span>
+  <p>
+  The translation repository defines how external
+  references from a fragment of the C# application should be
+  translated.  As an example, the correct translation of <code
+  class="prettyprint">objRef.Member++</code> depends on whether <code
+  class="prettyprint">Member</code> is a field or a property of <code
+  class="prettyprint">objRef</code>'s class.
+<p>
+  
+  External references recorded in the environment can have many types:
+  classes, structs, delegates, fields, properties, events, and so
+  on. They refer to types in:
+  <ul>
+    <li>the C# application being translated,</li>
+    <li>the .NET Framework, and</li>
+    <li>third party libraries.</li>
+  </ul>
+<p>
+  CS2J builds the repository by scanning all the C# files in the C#
+  application.  It then adds entries for .NET Framework and third
+  party libraries from a set of XML translation files.  CS2J comes
+  with a set of translation files for the most commonly used .NET
+  Framework classes and it is straightforward for clients to
+  add or modify these files to improve the translation of their
+  application.
+<p>
+ <span style="font-weight:bold">Translating to Java</span>
+  <p>
+<img src="/static/twiglet/images/cs2j.gif" align="right" width="425px"
+height="376px" vspace="5px" hspace="5px" title="CS2J Translation
+Phases" alt="CS2J Translation Phases"/>
+  Each C# file is converted to Java code.
+<p>
+  A C# 4.0 conformant front end parses the source code
+  into an abstract syntax tree.  The parser includes a pre-processor so
+  compiler and conditional compilation directives are respected.
+<p>
+  The C# syntax tree is then transformed into a set of Java-like
+  syntax trees, each representing one top level type from the original
+  source file (in C# a file may contain many types, but in Java each top 
+  level type must be written to its own
+  file). During this stage we are
+  converting as much C# syntax to Java syntax as we can,
+  e.g. properties and indexers are rewritten as getter and setter
+  methods,  structs are rewritten as classes, and so on.
+<p>
+  Each of the Java syntax trees is then further converted using the
+  translation repository to fix up external references.  During this phase we infer
+  types for the expressions in the tree so that the translations can
+  take into account the types of component expressions. These types
+  also allow us to carry out type based syntactical transformations
+  (so we can replace <code class="prettyprint">var str = "Hello
+  World";</code> by <code class="prettyprint">String str = "Hello
+  World";</code>). 
+<p>
+  Finally the fully translated Java syntax trees are pretty printed to
+  Java source files.
+  <p>
+  
+  {% comment %}
+  The global type environment maps each entity in the source
+  application (classes, structs, fields, delegates, inner classes, and
+  so on) to a descriptor that tells CS2J how to translate uses of
+  those entities.  As an example, if CS2J finds a reference to a field
+  of an imported class we need to know if that field is a simple field
+  or if it is really a property.  If it is a property CS2J translated
+  uses of the property into getter or setter methods as appropriate.
+
+  In phase 1 CS2J also reads entries from XML Translation Templates
+  provided with CS2J and adds them to the global type
+  environment. These XML files describe how CS2J should translate .Net
+  framework and 3rd party library calls. Clients can extend and modify
+  these template files to improve the translation quality.
+  
+The tool works by parsing the C# source code into a generic syntax tree. The .Net library calls are then extracted from the syntax tree and converted into their Java equivalent. Where equivalent Java translations are not available, custom methods may be inserted. The translator provides full access to provide custom library translations to optimize the conversion of individual applications. After the syntax tree has been fully translated, a pretty printer outputs the resultant Java source code.
+{% endcomment %}
+
+
+{% endblock body %}

@@ -1,0 +1,15 @@
+{% extends "twiglet/base_generic.html" %}
+
+{% block title %}Thanks{% endblock title %}
+
+{% block body %}
+<br />
+Thank you for your downloading CS2J.  Your download should start
+automatically, if not <a href="{% url twiglet.views.download_trial %}">Click Here</a>.
+<br />
+
+<iframe src="{% url twiglet.views.download_trial %}" style="display:none;" />
+
+{% endblock body %}
+
+

@@ -1,0 +1,17 @@
+{% extends "twiglet/base_frame_plain.html" %}
+
+{% block body %}
+
+{% block close %}
+
+<div align="right" class="popup closelink"><a href="#" onClick="javascript:$().interstitial('close'); return false">Close X</a></div>
+<p>
+
+{% endblock close %}
+
+<div class="bodycontent">
+{% block bodycontent %}
+{% endblock bodycontent %}
+</div>
+
+{% endblock body %}

@@ -1,0 +1,18 @@
+{% extends "twiglet/base_frame_plain.html" %}
+
+{% block loadstylefiles %}
+{% if formatting == 'pretty' %}
+<link rel="stylesheet" type="text/css" media="all" href="/static/twiglet/css/main.css"/>
+<link rel="stylesheet" type="text/css" media="all" href="/static/twiglet/css/pygments.css"/>
+{% endif %}
+{% endblock %}
+
+{% block title %}Display {{ fname }}{% endblock title %}
+
+{% block body %}
+
+{{ display|safe }}
+
+{% endblock body %}
+
+
