@@ -69,6 +69,7 @@ def get_file_tree_jstree(path, project_token, node_id = 'node', fname_token = ''
     dirs = []
     files = []
     sibling = 0
+    fnames = []
 
     if os.path.isfile(path):
         path,fname = os.path.split(path)
