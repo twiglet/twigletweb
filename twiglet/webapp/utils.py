@@ -19,7 +19,7 @@ def get_trial_version():
         fnames = os.listdir(settings.TWIGLET_TRIAL_DIR)
         ## go through the list looking for trial archives, extract version number and remember biggest
         ## e.g. cs2j-trial110323-a.zip
-        pat = re.compile('cs2j-trial(.*).zip')
+        pat = re.compile('cs2j-trial(?:-)(.*).zip')
         for fname in fnames:
            m = pat.search(fname)
            if m and (version == 'unknown' or m.group(1) > version):
