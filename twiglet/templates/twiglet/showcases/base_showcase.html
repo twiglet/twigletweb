@@ -24,7 +24,7 @@ function customMenu(node) {
               {
                  project = $("a",click_node).attr("project");
                  fname = $("a",click_node).attr("fname");
-                 base = "{% url twiglet.views.util_download 'PROJECT' 'FNAME' %}";
+                 base = "{% url webapp.views.util_download 'PROJECT' 'FNAME' %}";
                  url = base.replace('PROJECT', project).replace('FNAME', fname);
                  window.location=url;
              }
@@ -40,7 +40,7 @@ function customMenu(node) {
               {
                  project = $("a",click_node).attr("project");
                  fname = $("a",click_node).attr("fname");
-                 base = "{% url twiglet.views.util_download 'PROJECT' 'FNAME' %}";
+                 base = "{% url webapp.views.util_download 'PROJECT' 'FNAME' %}";
                  url = base.replace('PROJECT', project).replace('FNAME', fname);
                  window.location=url;
              }
@@ -52,7 +52,7 @@ function customMenu(node) {
               {
                  project = $("a",click_node).attr("project");
                  fname = $("a",click_node).attr("fname");
-                 base = "{% url twiglet.views.util_display_code 'plain' 'PROJECT' 'FNAME' %}";
+                 base = "{% url webapp.views.util_display_code 'plain' 'PROJECT' 'FNAME' %}";
                  url = base.replace('PROJECT', project).replace('FNAME', fname);
                  window.open(url);
              }
@@ -124,13 +124,13 @@ $(document).ready(function(){
 
 
 <div align="right">
-<button type="button" class="popup" href="{% url twiglet.views.showcase_no_license %}">copying</button>
-<button type="button" class="popup" href="{% url twiglet.views.showcase_dirtree_help %}">help</button>
+<button type="button" class="popup" href="{% url webapp.views.showcase_no_license %}">copying</button>
+<button type="button" class="popup" href="{% url webapp.views.showcase_dirtree_help %}">help</button>
 </div>
 </div>
 
 <div class="block_bottom contactmsg">
-  <a href="{% url twiglet.views.contact %}">Contact us</a> about our
+  <a href="{% url webapp.views.contact %}">Contact us</a> about our
   conversion services, or to license CS2J. We look forward to working
   with you.
 </div>
