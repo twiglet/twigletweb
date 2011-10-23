@@ -9,6 +9,7 @@ class ContactForm(ModelForm):
         widgets = {
             'name': TextInput(attrs={'size': 30, 'minlength' : 3, 'class' : 'entrybox round required'}),
             'email': TextInput(attrs={'size': 30, 'class' : 'entrybox round required email'}),
+            'phone': TextInput(attrs={'size': 30, 'class' : 'entrybox round'}),
             'comment': Textarea(attrs={'cols': 50, 'rows': 10, 'class' : 'entrybox round required'}),
         }
         
@@ -20,5 +21,6 @@ class DownloadForm(ModelForm):
         widgets = {
             'name': TextInput(attrs={'size': 30, 'minlength' : 3, 'class' : 'entrybox round required'}),
             'email': TextInput(attrs={'size': 30, 'class' : 'entrybox round required email'}),
+            'phone': TextInput(attrs={'size': 30, 'class' : 'entrybox round'}),
             'comment': Textarea(attrs={'cols': 50, 'rows': 10, 'class' : 'entrybox round'}),
         }

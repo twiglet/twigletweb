@@ -24,25 +24,33 @@
   <fieldset>
    <h2><legend>Contact us</legend></h2>
    <p>
-     <label for="cname">Name</label>
+     <label for="cname">Name<sup>*</sup></label>
      {{ form.name }}
      {% for error in form.name.errors %}
         <label for="id_name" generated="true" class="error">{{ error|escape }}</label>
      {% endfor %}
  </p>
    <p>
-     <label for="cemail">Email</label>
+     <label for="cemail">Email<sup>*</sup></label>
      {{ form.email }}
      {% for error in form.email.errors %}
         <label for="id_email" generated="true" class="error">{{ error|escape }}</label>
      {% endfor %}
- </p>
+   </p>
    <p>
-    <label for="ccomment">Your comment</label><br />
+     <label for="cphone">Phone</label>
+     {{ form.phone }}
+     {% for error in form.phone.errors %}
+        <label for="id_phone" generated="true" class="error">{{ error|escape }}</label>
+     {% endfor %}
+   </p>
+   <p>
+    <label for="ccomment">Your comment<sup>*</sup></label><br />
      {{ form.comment }}
      {% for error in form.comment.errors %}
         <label for="id_comment" generated="true" class="error">{{ error|escape }}</label>
      {% endfor %}
+    * required fields
   </p>
    <p>
      <input class="submit button" style="color:white" type="submit" value="Submit"/>

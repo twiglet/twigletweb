@@ -65,7 +65,7 @@ def contact(request):
             cd = form.cleaned_data
             send_mail(
                 "CS2J Online Contact from %s" % cd['name'],
-                "Name: %(name)s\nEmail: %(email)s\nMessage: %(comment)s" % cd,
+                "Name: %(name)s\nEmail: %(email)s\nPhone: %(phone)s\nMessage: %(comment)s" % cd,
                 cd.get('email'),
                 ['info+test@twigletsoftware.com'],
             )
@@ -95,7 +95,7 @@ def download(request):
             cd = form.cleaned_data
             send_mail(
                 "CS2J Trial download by %s" % cd['name'],
-                "Name: %(name)s\nEmail: %(email)s\nVersion: %(download_version)s\nMessage: %(comment)s" % dict(download_version = get_trial_version(), **cd),
+                "Name: %(name)s\nEmail: %(email)s\nPhone: %(phone)s\nVersion: %(download_version)s\nMessage: %(comment)s" % dict(download_version = get_trial_version(), **cd),
                 cd.get('email'),
                 ['info+test@twigletsoftware.com'],
             )
