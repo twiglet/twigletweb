@@ -5,7 +5,7 @@
 <head>
 
 <meta name='robots' content='noindex,nofollow' />
-<link rel="shortcut icon" href="http://devel.twigletsoftware.com/favicon.ico" />
+<link rel="shortcut icon" href="http://stage.twigletsoftware.com/favicon.ico" />
 <script type="text/javascript" src="/static/twiglet/js/jquery-1.6.1.min.js"></script>
 <script type="text/javascript" src="/static/twiglet/js/prettify.js"></script>
 {% block loadscriptfiles %}{% endblock%}
@@ -59,7 +59,7 @@
    <div id="branding" role="banner"> 
       <div id="site-title"> 
         <span> 
-          <a href="/twiglet/" title="Twiglet Software" rel="home">Twiglet Software</a> 
+          <a href="/" title="Twiglet Software" rel="home">Twiglet Software</a> 
         </span> 
       </div> 
       <div id="site-description">CS2J: Convert C# to Java
@@ -71,12 +71,12 @@
       <div class="skip-link screen-reader-text"><a href="#content" title="Skip to content">Skip to content</a></div> 
       <div class="menu">
         <ul>
-          <li class="page_item"><a href="/twiglet/" title="Home">Home</a></li>
-          <li class="page_item"><a href="/twiglet/how/" title="How CS2J Works">How CS2J Works</a></li>
-          <li class="page_item"><a href="/twiglet/showcase/" title="Showcase">Showcase</a></li>   
-          <li class="page_item"><a href="/twiglet/documentation/" title="Documentation">Documentation</a></li>
-          <li class="page_item"><a href="/twiglet/download/" title="Download CS2J Trial">Download CS2J Trial</a></li>
-          <li class="page_item"><a href="/twiglet/contact/" title="Contact">Contact</a></li>
+          <li class="page_item"><a href="/" title="Home">Home</a></li>
+          <li class="page_item"><a href="/how/" title="How CS2J Works">How CS2J Works</a></li>
+          <li class="page_item"><a href="/showcase/" title="Showcase">Showcase</a></li>   
+          <li class="page_item"><a href="/documentation/" title="Documentation">Documentation</a></li>
+          <li class="page_item"><a href="/download/" title="Download CS2J Trial">Download CS2J Trial</a></li>
+          <li class="page_item"><a href="/contact/" title="Contact">Contact</a></li>
         </ul>
       </div> 
     </div><!-- #access --> 
@@ -96,7 +96,7 @@
       <div class="kgcontainer">
 
         <div align="center" class="leftcolumntwo">
-          <div class="green button" target="{% url twiglet.views.download %}">
+          <div class="green button" target="{% url webapp.views.download %}">
             <div class="buttonfiller">
               Download a Trial Version
             </div>
@@ -104,7 +104,7 @@
         </div>
 
         <div align="center" class="leftcolumntwo">
-          <div class="button green" target="{% url twiglet.views.contact %}">
+          <div class="button green" target="{% url webapp.views.contact %}">
             <div class="buttonfiller">
               Got Questions? Ask Us
             </div>
@@ -121,7 +121,7 @@
 <div id="footer" role="contentinfo"> 
   <div id="colophon"> 
     <div id="site-info"> 
-	<a href="{% url twiglet.views.home %}" title="CS2J: Convert C# to Java" rel="home">CS2J: Convert C# to Java</a> 
+	<a href="{% url webapp.views.home %}" title="CS2J: Convert C# to Java" rel="home">CS2J: Convert C# to Java</a> 
     </div><!-- #site-info --> 
    <div id="site-generator"> 
      <a href="http://www.djangoproject.com/"><img src="http://media.djangoproject.com/img/badges/djangosite80x15.gif" border="0" alt="A Django site." title="A Django site." /></a>
