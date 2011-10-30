@@ -30,7 +30,6 @@
     <HelpKINode Title="all members" Url="html/AllMembers_T_FizzBuzz_Core_CoalescingTransformer.htm" />
     <HelpKINode Title="constructor" Url="html/M_FizzBuzz_Core_CoalescingTransformer__ctor.htm" />
     <HelpKINode Title="methods" Url="html/Methods_T_FizzBuzz_Core_CoalescingTransformer.htm" />
-    <HelpKINode Title="properties" Url="html/Properties_T_FizzBuzz_Core_CoalescingTransformer.htm" />
   </HelpKINode>
   <HelpKINode Title="CoalescingTransformer.CoalescingTransformer constructor" Url="html/M_FizzBuzz_Core_CoalescingTransformer__ctor.htm" />
   <HelpKINode Title="CoalescingTransformer.Transform method" Url="html/M_FizzBuzz_Core_CoalescingTransformer_Transform.htm" />
@@ -41,7 +40,6 @@
     <HelpKINode Title="all members" Url="html/AllMembers_T_FizzBuzz_Core_ConcatenatingTransformer.htm" />
     <HelpKINode Title="constructor" Url="html/M_FizzBuzz_Core_ConcatenatingTransformer__ctor.htm" />
     <HelpKINode Title="methods" Url="html/Methods_T_FizzBuzz_Core_ConcatenatingTransformer.htm" />
-    <HelpKINode Title="properties" Url="html/Properties_T_FizzBuzz_Core_ConcatenatingTransformer.htm" />
   </HelpKINode>
   <HelpKINode Title="ConcatenatingTransformer.ConcatenatingTransformer constructor" Url="html/M_FizzBuzz_Core_ConcatenatingTransformer__ctor.htm" />
   <HelpKINode Title="ConcatenatingTransformer.Transform method" Url="html/M_FizzBuzz_Core_ConcatenatingTransformer_Transform.htm" />
@@ -82,7 +80,6 @@
   <HelpKINode Title="FizzBuzz.BusinessLogic.FizzBuzzLogic class" Url="html/AllMembers_T_FizzBuzz_BusinessLogic_FizzBuzzLogic.htm" />
   <HelpKINode Title="FizzBuzz.BusinessLogic.FizzBuzzLogic class" Url="html/T_FizzBuzz_BusinessLogic_FizzBuzzLogic.htm" />
   <HelpKINode Title="FizzBuzz.Console namespace" Url="html/N_FizzBuzz_Console.htm" />
-  <HelpKINode Title="FizzBuzz.Console.Program class" Url="html/AllMembers_T_FizzBuzz_Console_Program.htm" />
   <HelpKINode Title="FizzBuzz.Console.Program class" Url="html/T_FizzBuzz_Console_Program.htm" />
   <HelpKINode Title="FizzBuzz.Core namespace" Url="html/N_FizzBuzz_Core.htm" />
   <HelpKINode Title="FizzBuzz.Core.AggregatedTransformer class" Url="html/AllMembers_T_FizzBuzz_Core_AggregatedTransformer.htm" />
@@ -179,7 +176,6 @@
   </HelpKINode>
   <HelpKINode Title="IWriter&lt;T&gt;.Write method" Url="html/M_FizzBuzz_Core_IWriter_1_Write.htm" />
   <HelpKINode Title="LowerBound property" Url="html/P_FizzBuzz_Core_Range_LowerBound.htm" />
-  <HelpKINode Title="Main method" Url="html/M_FizzBuzz_Console_Program_Main.htm" />
   <HelpKINode Title="Message property" Url="html/P_FizzBuzz_Core_StaticMessageTransformer_Message.htm" />
   <HelpKINode Title="MoveNext method" Url="html/M_FizzBuzz_Core_Range_RangeEnumerator_MoveNext.htm" />
   <HelpKINode Title="NotNull method" Url="html/M_FizzBuzz_Core_Helpers_Arguments_NotNull.htm" />
@@ -189,8 +185,6 @@
     <HelpKINode Title="about NullTransformer class" Url="html/T_FizzBuzz_Core_NullTransformer.htm" />
     <HelpKINode Title="all members" Url="html/AllMembers_T_FizzBuzz_Core_NullTransformer.htm" />
     <HelpKINode Title="constructor" Url="html/M_FizzBuzz_Core_NullTransformer__ctor.htm" />
-    <HelpKINode Title="methods" Url="html/Methods_T_FizzBuzz_Core_NullTransformer.htm" />
-    <HelpKINode Title="properties" Url="html/Properties_T_FizzBuzz_Core_NullTransformer.htm" />
   </HelpKINode>
   <HelpKINode Title="NullTransformer.NullTransformer constructor" Url="html/M_FizzBuzz_Core_NullTransformer__ctor.htm" />
   <HelpKINode Title="PredicatedTransformer class" Url="html/AllMembers_T_FizzBuzz_Core_PredicatedTransformer.htm" />
@@ -203,14 +197,10 @@
   </HelpKINode>
   <HelpKINode Title="PredicatedTransformer.PredicatedTransformer constructor" Url="html/M_FizzBuzz_Core_PredicatedTransformer__ctor.htm" />
   <HelpKINode Title="PredicatedTransformer.Transform method" Url="html/M_FizzBuzz_Core_PredicatedTransformer_Transform.htm" />
-  <HelpKINode Title="Program class" Url="html/AllMembers_T_FizzBuzz_Console_Program.htm" />
   <HelpKINode Title="Program class" Url="html/T_FizzBuzz_Console_Program.htm" />
   <HelpKINode Title="Program class">
     <HelpKINode Title="about Program class" Url="html/T_FizzBuzz_Console_Program.htm" />
-    <HelpKINode Title="all members" Url="html/AllMembers_T_FizzBuzz_Console_Program.htm" />
-    <HelpKINode Title="methods" Url="html/Methods_T_FizzBuzz_Console_Program.htm" />
   </HelpKINode>
-  <HelpKINode Title="Program.Main method" Url="html/M_FizzBuzz_Console_Program_Main.htm" />
   <HelpKINode Title="Range class" Url="html/AllMembers_T_FizzBuzz_Core_Range.htm" />
   <HelpKINode Title="Range class" Url="html/T_FizzBuzz_Core_Range.htm" />
   <HelpKINode Title="Range class">

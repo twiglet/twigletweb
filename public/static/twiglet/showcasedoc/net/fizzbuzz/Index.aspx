@@ -4,7 +4,7 @@
 <html>
 
 <head>
-<title>FizzBuzz Documentation - Table of Content</title>
+<title>Enterprise FizzBuzz - Table of Content</title>
 <link rel="stylesheet" href="TOC.css">
 <link rel="shortcut icon" href="favicon.ico"/>
 <script type="text/javascript" src="TOC.js"></script>

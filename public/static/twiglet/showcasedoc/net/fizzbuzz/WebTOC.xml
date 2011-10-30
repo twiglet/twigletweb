@@ -1,158 +1,149 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <HelpTOC>
 
-  <HelpTOCNode Id="c93394cd-bdda-4ad5-a398-3ae3d18ce1d3" Title="Namespaces" Url="html/R_Project.htm">
-    <HelpTOCNode Id="6a2f15c0-dd80-4e13-ad60-3c10e10b9c6b" Title="FizzBuzz.BusinessLogic Namespace" Url="html/N_FizzBuzz_BusinessLogic.htm">
-      <HelpTOCNode Id="0254bfd0-e2bc-40c3-be13-4c1c25527879" Title="FizzBuzzLogic Class" Url="html/T_FizzBuzz_BusinessLogic_FizzBuzzLogic.htm">
+  <HelpTOCNode Id="86f5b28c-2af4-4c8f-9ef4-489095b343b0" Title="Enterprise FizzBuzz" Url="html/R_Project.htm">
+    <HelpTOCNode Id="cbeaf033-925a-4c3d-8b2f-5ff339eb44e7" Title="FizzBuzz.BusinessLogic Namespace" Url="html/N_FizzBuzz_BusinessLogic.htm">
+      <HelpTOCNode Id="c1bf7bc4-332e-41e9-8f21-18efba9c9ac4" Title="FizzBuzzLogic Class" Url="html/T_FizzBuzz_BusinessLogic_FizzBuzzLogic.htm">
         <HelpTOCNode Title="FizzBuzzLogic Members" Url="html/AllMembers_T_FizzBuzz_BusinessLogic_FizzBuzzLogic.htm" />
         <HelpTOCNode Title="FizzBuzzLogic Constructor " Url="html/M_FizzBuzz_BusinessLogic_FizzBuzzLogic__ctor.htm" />
-        <HelpTOCNode Id="511fcb72-689a-4cdc-ae16-001f142643ad" Title="FizzBuzzLogic Methods" Url="html/Methods_T_FizzBuzz_BusinessLogic_FizzBuzzLogic.htm">
+        <HelpTOCNode Id="f51240f9-3811-43aa-98b9-52e55b2446d2" Title="FizzBuzzLogic Methods" Url="html/Methods_T_FizzBuzz_BusinessLogic_FizzBuzzLogic.htm">
           <HelpTOCNode Title="CreateFizzBuzzProcess Method " Url="html/M_FizzBuzz_BusinessLogic_FizzBuzzLogic_CreateFizzBuzzProcess.htm" />
           <HelpTOCNode Title="CreateRange Method " Url="html/M_FizzBuzz_BusinessLogic_FizzBuzzLogic_CreateRange.htm" />
           <HelpTOCNode Title="CreateTransformer Method " Url="html/M_FizzBuzz_BusinessLogic_FizzBuzzLogic_CreateTransformer.htm" />
         </HelpTOCNode>
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="b37f9f1b-176c-43a9-9a6b-8d239b882160" Title="FizzBuzz.Console Namespace" Url="html/N_FizzBuzz_Console.htm">
-      <HelpTOCNode Id="ce85991b-6640-42f4-87ea-30650c7068d6" Title="Program Class" Url="html/T_FizzBuzz_Console_Program.htm">
-        <HelpTOCNode Title="Program Members" Url="html/AllMembers_T_FizzBuzz_Console_Program.htm" />
-        <HelpTOCNode Id="49f554c5-862a-40c9-92df-30a7a1ba065a" Title="Program Methods" Url="html/Methods_T_FizzBuzz_Console_Program.htm">
-          <HelpTOCNode Title="Main Method " Url="html/M_FizzBuzz_Console_Program_Main.htm" />
-        </HelpTOCNode>
-      </HelpTOCNode>
+    <HelpTOCNode Id="f6b291cc-a70c-4da5-ba77-dcd28afa422c" Title="FizzBuzz.Console Namespace" Url="html/N_FizzBuzz_Console.htm">
+      <HelpTOCNode Title="Program Class" Url="html/T_FizzBuzz_Console_Program.htm" />
     </HelpTOCNode>
-    <HelpTOCNode Id="65bcd358-59f3-4382-8c44-87ebda9970c0" Title="FizzBuzz.Core Namespace" Url="html/N_FizzBuzz_Core.htm">
-      <HelpTOCNode Id="5c9d1ba9-ce96-46cf-94e4-d3e88555203e" Title="AggregatedTransformer Class" Url="html/T_FizzBuzz_Core_AggregatedTransformer.htm">
+    <HelpTOCNode Id="a017b34c-af7d-494d-9cc5-c6a245aeacb1" Title="FizzBuzz.Core Namespace" Url="html/N_FizzBuzz_Core.htm">
+      <HelpTOCNode Id="4ec91aac-f0ea-4225-94d1-7808d5be395c" Title="AggregatedTransformer Class" Url="html/T_FizzBuzz_Core_AggregatedTransformer.htm">
         <HelpTOCNode Title="AggregatedTransformer Members" Url="html/AllMembers_T_FizzBuzz_Core_AggregatedTransformer.htm" />
         <HelpTOCNode Title="AggregatedTransformer Constructor " Url="html/M_FizzBuzz_Core_AggregatedTransformer__ctor.htm" />
-        <HelpTOCNode Id="c857eca7-4040-42fb-b087-d940ba104389" Title="AggregatedTransformer Methods" Url="html/Methods_T_FizzBuzz_Core_AggregatedTransformer.htm">
+        <HelpTOCNode Id="9a74ee27-43bc-46dc-975e-97beaccf7e0e" Title="AggregatedTransformer Methods" Url="html/Methods_T_FizzBuzz_Core_AggregatedTransformer.htm">
           <HelpTOCNode Title="Transform Method " Url="html/M_FizzBuzz_Core_AggregatedTransformer_Transform.htm" />
         </HelpTOCNode>
-        <HelpTOCNode Id="7e43050c-6a9d-453c-ad66-7a6d2f0f7e27" Title="AggregatedTransformer Properties" Url="html/Properties_T_FizzBuzz_Core_AggregatedTransformer.htm">
+        <HelpTOCNode Id="45a1fdbc-ae1e-40b2-b83f-945748984681" Title="AggregatedTransformer Properties" Url="html/Properties_T_FizzBuzz_Core_AggregatedTransformer.htm">
           <HelpTOCNode Title="Transforms Property " Url="html/P_FizzBuzz_Core_AggregatedTransformer_Transforms.htm" />
         </HelpTOCNode>
       </HelpTOCNode>
-      <HelpTOCNode Id="df09c6dc-3698-449b-8f4a-d322569b09ce" Title="CoalescingTransformer Class" Url="html/T_FizzBuzz_Core_CoalescingTransformer.htm">
+      <HelpTOCNode Id="5501ec26-7df8-4f31-a312-17f6bec5fd41" Title="CoalescingTransformer Class" Url="html/T_FizzBuzz_Core_CoalescingTransformer.htm">
         <HelpTOCNode Title="CoalescingTransformer Members" Url="html/AllMembers_T_FizzBuzz_Core_CoalescingTransformer.htm" />
         <HelpTOCNode Title="CoalescingTransformer Constructor " Url="html/M_FizzBuzz_Core_CoalescingTransformer__ctor.htm" />
-        <HelpTOCNode Id="34a74432-cd44-42ef-b201-b69c8dc8cd0f" Title="CoalescingTransformer Methods" Url="html/Methods_T_FizzBuzz_Core_CoalescingTransformer.htm">
+        <HelpTOCNode Id="b02ff623-f572-4ae6-9c9f-ead2e36187cd" Title="CoalescingTransformer Methods" Url="html/Methods_T_FizzBuzz_Core_CoalescingTransformer.htm">
           <HelpTOCNode Title="Transform Method " Url="html/M_FizzBuzz_Core_CoalescingTransformer_Transform.htm" />
         </HelpTOCNode>
-        <HelpTOCNode Title="CoalescingTransformer Properties" Url="html/Properties_T_FizzBuzz_Core_CoalescingTransformer.htm" />
       </HelpTOCNode>
-      <HelpTOCNode Id="2e6bed38-e840-4aef-aeb8-502ed577a0a0" Title="ConcatenatingTransformer Class" Url="html/T_FizzBuzz_Core_ConcatenatingTransformer.htm">
+      <HelpTOCNode Id="7f3b6d74-a653-4ed4-a33e-1db154e3766c" Title="ConcatenatingTransformer Class" Url="html/T_FizzBuzz_Core_ConcatenatingTransformer.htm">
         <HelpTOCNode Title="ConcatenatingTransformer Members" Url="html/AllMembers_T_FizzBuzz_Core_ConcatenatingTransformer.htm" />
         <HelpTOCNode Title="ConcatenatingTransformer Constructor " Url="html/M_FizzBuzz_Core_ConcatenatingTransformer__ctor.htm" />
-        <HelpTOCNode Id="4fbf7d1b-e2d2-48be-972f-25166fe720fe" Title="ConcatenatingTransformer Methods" Url="html/Methods_T_FizzBuzz_Core_ConcatenatingTransformer.htm">
+        <HelpTOCNode Id="ecf5b8bc-e1e2-4d07-941a-f45a4a619fea" Title="ConcatenatingTransformer Methods" Url="html/Methods_T_FizzBuzz_Core_ConcatenatingTransformer.htm">
           <HelpTOCNode Title="Transform Method " Url="html/M_FizzBuzz_Core_ConcatenatingTransformer_Transform.htm" />
         </HelpTOCNode>
-        <HelpTOCNode Title="ConcatenatingTransformer Properties" Url="html/Properties_T_FizzBuzz_Core_ConcatenatingTransformer.htm" />
       </HelpTOCNode>
-      <HelpTOCNode Id="b2994a87-8d2e-4a75-aca5-3ccc0e5c8d72" Title="EnumerableWriter(T) Class" Url="html/T_FizzBuzz_Core_EnumerableWriter_1.htm">
+      <HelpTOCNode Id="c0833c7a-cd23-4af4-b2eb-95e2442d90b6" Title="EnumerableWriter(T) Class" Url="html/T_FizzBuzz_Core_EnumerableWriter_1.htm">
         <HelpTOCNode Title="EnumerableWriter(T) Members" Url="html/AllMembers_T_FizzBuzz_Core_EnumerableWriter_1.htm" />
         <HelpTOCNode Title="EnumerableWriter(T) Constructor " Url="html/M_FizzBuzz_Core_EnumerableWriter_1__ctor.htm" />
-        <HelpTOCNode Id="9ef57586-65e1-4d40-8c0c-8d3757810d1f" Title="EnumerableWriter(T) Methods" Url="html/Methods_T_FizzBuzz_Core_EnumerableWriter_1.htm">
+        <HelpTOCNode Id="226379c0-8ea5-4f18-80d0-6f9610fca1ab" Title="EnumerableWriter(T) Methods" Url="html/Methods_T_FizzBuzz_Core_EnumerableWriter_1.htm">
           <HelpTOCNode Title="Run Method " Url="html/M_FizzBuzz_Core_EnumerableWriter_1_Run.htm" />
         </HelpTOCNode>
-        <HelpTOCNode Id="36f71bf3-d08d-4478-94df-f0ade61149f4" Title="EnumerableWriter(T) Properties" Url="html/Properties_T_FizzBuzz_Core_EnumerableWriter_1.htm">
+        <HelpTOCNode Id="ec408e74-7f3c-4bba-95b6-6c7a82a7bbfb" Title="EnumerableWriter(T) Properties" Url="html/Properties_T_FizzBuzz_Core_EnumerableWriter_1.htm">
           <HelpTOCNode Title="Enumeration Property " Url="html/P_FizzBuzz_Core_EnumerableWriter_1_Enumeration.htm" />
           <HelpTOCNode Title="Writer Property " Url="html/P_FizzBuzz_Core_EnumerableWriter_1_Writer.htm" />
         </HelpTOCNode>
       </HelpTOCNode>
-      <HelpTOCNode Id="48e71626-80be-4ecd-9749-6832c1f416f3" Title="IdentityTransformer Class" Url="html/T_FizzBuzz_Core_IdentityTransformer.htm">
+      <HelpTOCNode Id="0f2b5092-60d2-48af-9427-b57220ce0699" Title="IdentityTransformer Class" Url="html/T_FizzBuzz_Core_IdentityTransformer.htm">
         <HelpTOCNode Title="IdentityTransformer Members" Url="html/AllMembers_T_FizzBuzz_Core_IdentityTransformer.htm" />
         <HelpTOCNode Title="IdentityTransformer Constructor " Url="html/M_FizzBuzz_Core_IdentityTransformer__ctor.htm" />
-        <HelpTOCNode Id="e9e3a383-de00-46b5-a45f-a30c33b87007" Title="IdentityTransformer Methods" Url="html/Methods_T_FizzBuzz_Core_IdentityTransformer.htm">
+        <HelpTOCNode Id="7e1ba029-2589-4c82-8380-007eda22b6aa" Title="IdentityTransformer Methods" Url="html/Methods_T_FizzBuzz_Core_IdentityTransformer.htm">
           <HelpTOCNode Title="Transform Method " Url="html/M_FizzBuzz_Core_IdentityTransformer_Transform.htm" />
         </HelpTOCNode>
       </HelpTOCNode>
-      <HelpTOCNode Id="11a5e166-fe51-47bb-a2fa-44348b04fc45" Title="IRunnable Interface" Url="html/T_FizzBuzz_Core_IRunnable.htm">
+      <HelpTOCNode Id="4b36039c-61de-4830-acdb-177b9aa464a1" Title="IRunnable Interface" Url="html/T_FizzBuzz_Core_IRunnable.htm">
         <HelpTOCNode Title="IRunnable Members" Url="html/AllMembers_T_FizzBuzz_Core_IRunnable.htm" />
-        <HelpTOCNode Id="b74698a7-1cda-4f71-8c7d-2111b012706e" Title="IRunnable Methods" Url="html/Methods_T_FizzBuzz_Core_IRunnable.htm">
+        <HelpTOCNode Id="5b1e92ca-6aa4-479e-a0bc-d620acc0b3e2" Title="IRunnable Methods" Url="html/Methods_T_FizzBuzz_Core_IRunnable.htm">
           <HelpTOCNode Title="Run Method " Url="html/M_FizzBuzz_Core_IRunnable_Run.htm" />
         </HelpTOCNode>
       </HelpTOCNode>
-      <HelpTOCNode Id="e7c6f6bf-b844-4177-958a-844cc819a1a4" Title="ITransformer Interface" Url="html/T_FizzBuzz_Core_ITransformer.htm">
+      <HelpTOCNode Id="1f32d6b6-2d5f-454b-88dc-0094aa05f09f" Title="ITransformer Interface" Url="html/T_FizzBuzz_Core_ITransformer.htm">
         <HelpTOCNode Title="ITransformer Members" Url="html/AllMembers_T_FizzBuzz_Core_ITransformer.htm" />
-        <HelpTOCNode Id="64fb2189-e620-432e-af96-712614ebc2a9" Title="ITransformer Methods" Url="html/Methods_T_FizzBuzz_Core_ITransformer.htm">
+        <HelpTOCNode Id="ee402446-c962-4e65-9547-bbe512c38f80" Title="ITransformer Methods" Url="html/Methods_T_FizzBuzz_Core_ITransformer.htm">
           <HelpTOCNode Title="Transform Method " Url="html/M_FizzBuzz_Core_ITransformer_Transform.htm" />
         </HelpTOCNode>
       </HelpTOCNode>
-      <HelpTOCNode Id="6fec36e0-63d8-4c84-b0aa-bf6ff354fddf" Title="IWriter(T) Interface" Url="html/T_FizzBuzz_Core_IWriter_1.htm">
+      <HelpTOCNode Id="1fd5f7c4-1e1a-4a75-b427-136e1e562adc" Title="IWriter(T) Interface" Url="html/T_FizzBuzz_Core_IWriter_1.htm">
         <HelpTOCNode Title="IWriter(T) Members" Url="html/AllMembers_T_FizzBuzz_Core_IWriter_1.htm" />
-        <HelpTOCNode Id="68c541cd-5c62-45e4-84e3-5fad3c778b27" Title="IWriter(T) Methods" Url="html/Methods_T_FizzBuzz_Core_IWriter_1.htm">
+        <HelpTOCNode Id="966e0220-a921-41aa-ac52-ebe997288de8" Title="IWriter(T) Methods" Url="html/Methods_T_FizzBuzz_Core_IWriter_1.htm">
           <HelpTOCNode Title="Write Method " Url="html/M_FizzBuzz_Core_IWriter_1_Write.htm" />
         </HelpTOCNode>
       </HelpTOCNode>
-      <HelpTOCNode Id="9a5557a5-8258-40b9-ac96-e4838bad2aee" Title="NullTransformer Class" Url="html/T_FizzBuzz_Core_NullTransformer.htm">
+      <HelpTOCNode Id="924fb82b-c17b-402f-a4cc-cbb31728ebd1" Title="NullTransformer Class" Url="html/T_FizzBuzz_Core_NullTransformer.htm">
         <HelpTOCNode Title="NullTransformer Members" Url="html/AllMembers_T_FizzBuzz_Core_NullTransformer.htm" />
         <HelpTOCNode Title="NullTransformer Constructor " Url="html/M_FizzBuzz_Core_NullTransformer__ctor.htm" />
-        <HelpTOCNode Title="NullTransformer Methods" Url="html/Methods_T_FizzBuzz_Core_NullTransformer.htm" />
-        <HelpTOCNode Title="NullTransformer Properties" Url="html/Properties_T_FizzBuzz_Core_NullTransformer.htm" />
       </HelpTOCNode>
-      <HelpTOCNode Id="80c4c1a2-a1aa-4364-be08-cfa24b320770" Title="PredicatedTransformer Class" Url="html/T_FizzBuzz_Core_PredicatedTransformer.htm">
+      <HelpTOCNode Id="1c770b15-c310-4c82-8c05-b7993e97e56e" Title="PredicatedTransformer Class" Url="html/T_FizzBuzz_Core_PredicatedTransformer.htm">
         <HelpTOCNode Title="PredicatedTransformer Members" Url="html/AllMembers_T_FizzBuzz_Core_PredicatedTransformer.htm" />
         <HelpTOCNode Title="PredicatedTransformer Constructor " Url="html/M_FizzBuzz_Core_PredicatedTransformer__ctor.htm" />
-        <HelpTOCNode Id="8d58e077-448f-4f97-9cbc-2985847538a5" Title="PredicatedTransformer Methods" Url="html/Methods_T_FizzBuzz_Core_PredicatedTransformer.htm">
+        <HelpTOCNode Id="caabf112-7ad6-4dc6-b42a-ed8c4a9841a6" Title="PredicatedTransformer Methods" Url="html/Methods_T_FizzBuzz_Core_PredicatedTransformer.htm">
           <HelpTOCNode Title="Transform Method " Url="html/M_FizzBuzz_Core_PredicatedTransformer_Transform.htm" />
         </HelpTOCNode>
       </HelpTOCNode>
-      <HelpTOCNode Id="995aa1ef-59d3-4b89-8cd7-7c355d54cffd" Title="Range Class" Url="html/T_FizzBuzz_Core_Range.htm">
+      <HelpTOCNode Id="42a65e9e-8c63-4991-883b-c4c84916fc33" Title="Range Class" Url="html/T_FizzBuzz_Core_Range.htm">
         <HelpTOCNode Title="Range Members" Url="html/AllMembers_T_FizzBuzz_Core_Range.htm" />
         <HelpTOCNode Title="Range Constructor " Url="html/M_FizzBuzz_Core_Range__ctor.htm" />
-        <HelpTOCNode Id="895c175a-f10f-49f3-9360-b62acc0910d6" Title="Range Methods" Url="html/Methods_T_FizzBuzz_Core_Range.htm">
+        <HelpTOCNode Id="97b4886c-1496-4761-a800-6a8b1859e2b1" Title="Range Methods" Url="html/Methods_T_FizzBuzz_Core_Range.htm">
           <HelpTOCNode Title="Each Method " Url="html/M_FizzBuzz_Core_Range_Each.htm" />
           <HelpTOCNode Title="GetEnumerator Method " Url="html/M_FizzBuzz_Core_Range_GetEnumerator.htm" />
         </HelpTOCNode>
-        <HelpTOCNode Id="922fbc45-094d-4706-b2cf-675be089e3a2" Title="Range Properties" Url="html/Properties_T_FizzBuzz_Core_Range.htm">
+        <HelpTOCNode Id="c26e6863-81e7-4829-af32-1d7473aa326d" Title="Range Properties" Url="html/Properties_T_FizzBuzz_Core_Range.htm">
           <HelpTOCNode Title="LowerBound Property " Url="html/P_FizzBuzz_Core_Range_LowerBound.htm" />
           <HelpTOCNode Title="UpperBound Property " Url="html/P_FizzBuzz_Core_Range_UpperBound.htm" />
         </HelpTOCNode>
       </HelpTOCNode>
-      <HelpTOCNode Id="a93bff36-4a75-4f8b-a45d-c88874f1f193" Title="Range.RangeEnumerator Class" Url="html/T_FizzBuzz_Core_Range_RangeEnumerator.htm">
+      <HelpTOCNode Id="29eef398-9db0-4828-aa31-ffeb8205fa1f" Title="Range.RangeEnumerator Class" Url="html/T_FizzBuzz_Core_Range_RangeEnumerator.htm">
         <HelpTOCNode Title="Range.RangeEnumerator Members" Url="html/AllMembers_T_FizzBuzz_Core_Range_RangeEnumerator.htm" />
         <HelpTOCNode Title="Range.RangeEnumerator Constructor " Url="html/M_FizzBuzz_Core_Range_RangeEnumerator__ctor.htm" />
-        <HelpTOCNode Id="b317163d-9a06-46c9-9b9c-57f1b52088ce" Title="Range.RangeEnumerator Methods" Url="html/Methods_T_FizzBuzz_Core_Range_RangeEnumerator.htm">
+        <HelpTOCNode Id="aa0199fc-865a-49c7-ba34-466a4c140bae" Title="Range.RangeEnumerator Methods" Url="html/Methods_T_FizzBuzz_Core_Range_RangeEnumerator.htm">
           <HelpTOCNode Title="Dispose Method " Url="html/M_FizzBuzz_Core_Range_RangeEnumerator_Dispose.htm" />
           <HelpTOCNode Title="MoveNext Method " Url="html/M_FizzBuzz_Core_Range_RangeEnumerator_MoveNext.htm" />
           <HelpTOCNode Title="Reset Method " Url="html/M_FizzBuzz_Core_Range_RangeEnumerator_Reset.htm" />
         </HelpTOCNode>
-        <HelpTOCNode Id="92a6d393-229d-4861-b5fa-b428d63450eb" Title="Range.RangeEnumerator Properties" Url="html/Properties_T_FizzBuzz_Core_Range_RangeEnumerator.htm">
+        <HelpTOCNode Id="56852dbe-aea4-4166-b960-b5cf65da3363" Title="Range.RangeEnumerator Properties" Url="html/Properties_T_FizzBuzz_Core_Range_RangeEnumerator.htm">
           <HelpTOCNode Title="Current Property " Url="html/P_FizzBuzz_Core_Range_RangeEnumerator_Current.htm" />
         </HelpTOCNode>
       </HelpTOCNode>
-      <HelpTOCNode Id="01c8712a-a1f4-4e0a-a3fe-ef29b46d9b45" Title="StaticMessageTransformer Class" Url="html/T_FizzBuzz_Core_StaticMessageTransformer.htm">
+      <HelpTOCNode Id="79d9cc1c-2796-4cb4-a830-dd11dd8809b6" Title="StaticMessageTransformer Class" Url="html/T_FizzBuzz_Core_StaticMessageTransformer.htm">
         <HelpTOCNode Title="StaticMessageTransformer Members" Url="html/AllMembers_T_FizzBuzz_Core_StaticMessageTransformer.htm" />
         <HelpTOCNode Title="StaticMessageTransformer Constructor " Url="html/M_FizzBuzz_Core_StaticMessageTransformer__ctor.htm" />
-        <HelpTOCNode Id="84d4275f-1a2b-42bf-9309-65f7f093e306" Title="StaticMessageTransformer Methods" Url="html/Methods_T_FizzBuzz_Core_StaticMessageTransformer.htm">
+        <HelpTOCNode Id="1a4715b0-2f58-4a2b-96e2-78380d4c9ed4" Title="StaticMessageTransformer Methods" Url="html/Methods_T_FizzBuzz_Core_StaticMessageTransformer.htm">
           <HelpTOCNode Title="Transform Method " Url="html/M_FizzBuzz_Core_StaticMessageTransformer_Transform.htm" />
         </HelpTOCNode>
-        <HelpTOCNode Id="1162c9c8-eb62-429c-82f9-7651bf5ad9b0" Title="StaticMessageTransformer Properties" Url="html/Properties_T_FizzBuzz_Core_StaticMessageTransformer.htm">
+        <HelpTOCNode Id="76042031-c0eb-4712-a4ae-cddac73cdaf1" Title="StaticMessageTransformer Properties" Url="html/Properties_T_FizzBuzz_Core_StaticMessageTransformer.htm">
           <HelpTOCNode Title="Message Property " Url="html/P_FizzBuzz_Core_StaticMessageTransformer_Message.htm" />
         </HelpTOCNode>
       </HelpTOCNode>
-      <HelpTOCNode Id="a462479b-4c32-4606-9bf9-a894e92b9c69" Title="TransformingTextWriter Class" Url="html/T_FizzBuzz_Core_TransformingTextWriter.htm">
+      <HelpTOCNode Id="f509dd36-44c2-4181-87e3-002ea128a917" Title="TransformingTextWriter Class" Url="html/T_FizzBuzz_Core_TransformingTextWriter.htm">
         <HelpTOCNode Title="TransformingTextWriter Members" Url="html/AllMembers_T_FizzBuzz_Core_TransformingTextWriter.htm" />
         <HelpTOCNode Title="TransformingTextWriter Constructor " Url="html/M_FizzBuzz_Core_TransformingTextWriter__ctor.htm" />
-        <HelpTOCNode Id="790edd1d-b041-4195-bb64-f60c226cbace" Title="TransformingTextWriter Methods" Url="html/Methods_T_FizzBuzz_Core_TransformingTextWriter.htm">
+        <HelpTOCNode Id="d665387b-0803-4618-a194-0cef9c5296c4" Title="TransformingTextWriter Methods" Url="html/Methods_T_FizzBuzz_Core_TransformingTextWriter.htm">
           <HelpTOCNode Title="Write Method " Url="html/M_FizzBuzz_Core_TransformingTextWriter_Write.htm" />
         </HelpTOCNode>
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="b1d55f36-db5a-4d5f-9ec9-ddfa4f203272" Title="FizzBuzz.Core.Helpers Namespace" Url="html/N_FizzBuzz_Core_Helpers.htm">
-      <HelpTOCNode Id="57e53e9a-548d-474f-86de-9392e28f7598" Title="Arguments Class" Url="html/T_FizzBuzz_Core_Helpers_Arguments.htm">
+    <HelpTOCNode Id="05221309-94fc-47d6-a73a-ad6bd3da9ec0" Title="FizzBuzz.Core.Helpers Namespace" Url="html/N_FizzBuzz_Core_Helpers.htm">
+      <HelpTOCNode Id="10b9f82e-5ca6-4eaa-b366-017bc2ce76c2" Title="Arguments Class" Url="html/T_FizzBuzz_Core_Helpers_Arguments.htm">
         <HelpTOCNode Title="Arguments Members" Url="html/AllMembers_T_FizzBuzz_Core_Helpers_Arguments.htm" />
-        <HelpTOCNode Id="f6b801cd-a63a-4bdc-931b-6cf4e2be2054" Title="Arguments Methods" Url="html/Methods_T_FizzBuzz_Core_Helpers_Arguments.htm">
+        <HelpTOCNode Id="f2e8a3a9-dada-41fb-987b-6f50298fe77f" Title="Arguments Methods" Url="html/Methods_T_FizzBuzz_Core_Helpers_Arguments.htm">
           <HelpTOCNode Title="NotNull Method " Url="html/M_FizzBuzz_Core_Helpers_Arguments_NotNull.htm" />
           <HelpTOCNode Title="Test Method " Url="html/M_FizzBuzz_Core_Helpers_Arguments_Test.htm" />
         </HelpTOCNode>
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="be3d970f-e0d5-4719-8a9f-fb39c852a1d2" Title="FizzBuzz.Core.Properties Namespace" Url="html/N_FizzBuzz_Core_Properties.htm">
-      <HelpTOCNode Id="76c2967f-d76d-4266-9dcd-7b5f3c55730b" Title="Resources Class" Url="html/T_FizzBuzz_Core_Properties_Resources.htm">
+    <HelpTOCNode Id="92c8927a-776d-4f5e-8948-6eccd4d49ade" Title="FizzBuzz.Core.Properties Namespace" Url="html/N_FizzBuzz_Core_Properties.htm">
+      <HelpTOCNode Id="ca2dee30-7b5c-47cb-ba89-42a8d8122152" Title="Resources Class" Url="html/T_FizzBuzz_Core_Properties_Resources.htm">
         <HelpTOCNode Title="Resources Members" Url="html/AllMembers_T_FizzBuzz_Core_Properties_Resources.htm" />
         <HelpTOCNode Title="Resources Constructor " Url="html/M_FizzBuzz_Core_Properties_Resources__ctor.htm" />
-        <HelpTOCNode Id="507d069a-74ec-4c49-97a8-52c9a20a5746" Title="Resources Properties" Url="html/Properties_T_FizzBuzz_Core_Properties_Resources.htm">
+        <HelpTOCNode Id="7f11321e-dab2-4d08-aaaf-81fdc5ac6f67" Title="Resources Properties" Url="html/Properties_T_FizzBuzz_Core_Properties_Resources.htm">
           <HelpTOCNode Title="ArgumentMustNotBeNullMessage Property " Url="html/P_FizzBuzz_Core_Properties_Resources_ArgumentMustNotBeNullMessage.htm" />
           <HelpTOCNode Title="UpperBoundMustBeGreaterThanLowerBoundMessage Property " Url="html/P_FizzBuzz_Core_Properties_Resources_UpperBoundMustBeGreaterThanLowerBoundMessage.htm" />
         </HelpTOCNode>
