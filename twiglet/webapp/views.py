@@ -34,9 +34,9 @@ def showcase(request):
 ##
 
 def showcase_helloworld(request):
-    csharp_listing = get_file_tree_jstree(os.path.join(settings.TWIGLET_SHOWCASE_DIR, "generics", "csharp"), "generics", "csnode", "csharp")
-    java_listing = get_file_tree_jstree(os.path.join(settings.TWIGLET_SHOWCASE_DIR, "generics", "java"), "generics", "jnode", "java")
-    return render_to_response('twiglet/showcases/helloworld.html', {'csharp_tree_json': simplejson.dumps(csharp_listing), 'java_tree_json': simplejson.dumps(java_listing)})
+    csharp_listing = get_file_tree_jstree(os.path.join(settings.TWIGLET_SHOWCASE_DIR, "code", "fizzbuzz", "csharp"), "fizzbuzz", "csnode", "csharp")
+    java_listing = get_file_tree_jstree(os.path.join(settings.TWIGLET_SHOWCASE_DIR, "code", "fizzbuzz", "java"), "fizzbuzz", "jnode", "java")
+    return render_to_response('twiglet/showcases/fizzbuzz.html', {'csharp_tree_json': simplejson.dumps(csharp_listing), 'java_tree_json': simplejson.dumps(java_listing)})
 
 def showcase_generics(request):
     return render_to_response('twiglet/showcases/generics.html')
@@ -139,7 +139,7 @@ def util_display(request, project, fname):
         my_project = os.path.join(*project.split('_'))
         my_dirname = os.path.join(*fname.split('_'))
     
-        listing = get_file_tree_jstree(os.path.join(settings.TWIGLET_SHOWCASE_DIR, my_project, my_dirname), project, fname)
+        listing = get_file_tree_jstree(os.path.join(settings.TWIGLET_SHOWCASE_DIR, "code", my_project, my_dirname), project, fname)
         ##listing_ul = tree_to_ul(listing)
         return render_to_response('twiglet/display_tree.html', {'tree_json': simplejson.dumps(listing)})
     except Exception:
@@ -153,7 +153,7 @@ def util_display_code(request, project, fname, formatting='pretty'):
         my_project = os.path.join(*project.split('_'))
         my_fname = os.path.join(*fname.split('_'))
 
-        code_file = os.path.join(settings.TWIGLET_SHOWCASE_DIR, my_project, my_fname)
+        code_file = os.path.join(settings.TWIGLET_SHOWCASE_DIR, "code", my_project, my_fname)
         if not(os.path.isfile(code_file)):
             raise Http404
         source = open(code_file, 'r')
@@ -162,7 +162,7 @@ def util_display_code(request, project, fname, formatting='pretty'):
                                           lexers.get_lexer_for_filename(os.path.basename(my_fname)),
                                           formatters.HtmlFormatter(linenos=True))
         else:
-            formatted_display = '<pre>' + source.read().replace('<','&lt;') + '</pre>'
+            formatted_display = unicode(source.read(), errors='replace')
 
         return render_to_response('twiglet/display_code.html', {'project': my_project, 'fname' : my_fname, 'display' : formatted_display, 'formatting' : formatting })
     except Exception:
@@ -175,7 +175,7 @@ def util_download(request, project, fname, mimetype = None):
         my_project = os.path.join(*project.split('_'))
         my_fname = os.path.join(*fname.split('_'))
     
-        target = os.path.join(settings.TWIGLET_SHOWCASE_DIR, my_project, my_fname)
+        target = os.path.join(settings.TWIGLET_SHOWCASE_DIR, "code", my_project, my_fname)
         if os.path.isfile(target):
             filename = os.path.basename(target)
             if mimetype is None:
