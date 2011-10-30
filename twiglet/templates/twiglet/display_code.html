@@ -11,7 +11,17 @@
 
 {% block body %}
 
+{% if formatting == 'pretty' %}
+
 {{ display|safe }}
+
+{% else %}
+<pre>
+
+{{ display }}
+
+</pre>
+{% endif %}
 
 {% endblock body %}
 
