@@ -197,6 +197,18 @@ def util_download(request, project, fname, mimetype = None):
                     absfn = os.path.join(root, fn)
                     zfn = os.path.join(archive_name, absfn[len(target):]) #XXX: relative path
                     archive.write(absfn, zfn.encode("latin-1"))
+            #Look for enclosing RESOURCES folder and include in archive
+            search_resources = True
+            path_resources = target
+            while search_resources:
+                if os.path.isdir(os.path.join(path_resources, 'RESOURCES')) or path_resources == os.path.dirname(path_resources):
+                    ## found RESOURCES directory, or reached the root
+                    search_resources = False
+                else:
+                    path_resources = os.path.dirname(path_resources)
+            if os.path.isdir(os.path.join(path_resources, 'RESOURCES')):
+                for fn in os.listdir(os.path.join(path_resources, 'RESOURCES')):
+                    archive.write(os.path.join(path_resources, 'RESOURCES', fn),fn.encode("latin-1"))
             archive.close()
             size = temp.tell()
             temp.seek(0)
