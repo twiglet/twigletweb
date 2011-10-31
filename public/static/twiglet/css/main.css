@@ -206,7 +206,8 @@ div.menu,
 
 /* Main global 'theme' and typographic styles */
 body {
-	background: #CC9;
+/*	background: #CC9;*/
+	background: #EEE;
 }
 body,
 input,
