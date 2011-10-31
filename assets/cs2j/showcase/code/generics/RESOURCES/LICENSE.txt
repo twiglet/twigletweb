@@ -1,4 +1,4 @@
-The C# code was written by Peter Sestoft and is available from http://www.dina.kvl.dk/~sestoft/gcsharp/index.html#collection
+The C# code was written by Peter Sestoft and is available from http://www.dina.kvl.dk/~sestoft/gcsharp/index.html
 
 There is no license given with the code, just the following announcement that you can find on that page.
 
