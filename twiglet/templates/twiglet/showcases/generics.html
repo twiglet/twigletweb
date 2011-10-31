@@ -1,1 +1,40 @@
 {% extends "twiglet/showcases/base_showcase.html" %}
+
+{% block showcasedescription %}
+  This is a sample program written by Peter Sestoft to show off the use of generic classes in C#. 
+  It will convert a regular expression to a deterministic finite automaton (and visualize that DFA
+  by producing a dot file that can be viewed with <a href="http://www.graphviz.org/">graphviz</a>).
+  <p>
+  A fuller description, the source code, and some more nice examples can be found on Peter's <a href="http://www.dina.kvl.dk/~sestoft/gcsharp/index.html">web site</a>. 
+  The translation from C# to Java shown here is compeletely automatic:
+<ul>
+   <li>
+
+     Notice how the single C# file is rewritten to 11 Java files, one per class.
+
+   </li>
+   <li>
+
+     Normally, we translate references to "built-in" C# types such as <code class="prettyprint">int</code> and <code class="prettyprint">bool</code> to the corresponding primitive type in Java.  However, in some contexts (such as generic type arguments), it is neccessary to translate to the corresponding boxed types.  See the translations for <code class="prettyprint">int</code> on lines 23 and 24 of Dfa.java.
+
+   </li>
+   <li>
+
+      <code class="prettyprint">Set&lt;T&gt;</code> implements the <code class="prettyprint">ICollection&lt;T&gt;</code> interface.  In Set.java you can see that CS2J has added
+      implementations for <code class="prettyprint">iterator(), add(), addAll(), clear(), contains(), containsAll(), isEmpty(), remove(), removeAll(), retainAll(), size()</code> 
+      and <code class="prettyprint">toArray()</code> so that it can also implement the Java interface <code class="prettyprint">Collection</code>.  
+
+   </li>
+
+</ul>  
+
+     There are many more interesting examples that you can find by studying this example. You can download the code
+     by right clicking on the top most folder. Both are runnable code.  For the Java code you will also need the
+     CS2JLibrary project which you can download as part of the 
+     <a href="{% url webapp.views.download %}">CS2J trial</a>..
+  
+{% endblock %}
+
+{% block license_popup_button %}
+<button type="button" class="popup" href="{% url webapp.views.showcase_license_sestoft %}">copying</button>
+{% endblock %}
