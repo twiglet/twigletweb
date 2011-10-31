@@ -3,8 +3,67 @@
 {% block showcasedescription %}
   This is Mike Minutillo's Enterprise worthy implementation of the infamous <a href="http://imranontech.com/2007/01/24/using-fizzbuzz-to-find-developers-who-grok-coding/">Fizzbuzz programming challenge</a>. Mike has blogged about <a href="http://codermike.com/if-something-is-worth-doing">his motivation</a> and provided <a href="http://code.google.com/p/fizzbuzz/">the source code</a>. It provides a nice, well-written C# program to show off some of CS2J's goodies. The translation from C# to Java shown here is compeletely automatic:
 <ul>
-   <li>CS2J transfers comments from the C# program into the Java code.  In addition, C# documentation comments are translated into Javadoc comments.  You can compare the <a href="/static/twiglet/showcasedoc/net/fizzbuzz/Index.html">C# documentation</a> to the <a href="/static/twiglet/showcasedoc/java/fizzbuzz/index.html">Java documentation</a>.</li>
-</ul>   
+   <li>
+
+     As is required for Java programs,  classes are placed in their own file, in directories named after
+     their package. Packages are named after the namespaces used in the C# program. Minimal, sufficient import
+     statements are automatically inserted into each class definition.
+
+   </li>
+   <li>
+
+      All comments are transferred from the C# program into the Java
+      code.  In addition, C# documentation comments are translated
+      into Javadoc comments.  You can compare
+      the <a href="/static/twiglet/showcasedoc/net/fizzbuzz/Index.html">C#
+      documentation</a> to
+      the <a href="/static/twiglet/showcasedoc/java/fizzbuzz/index.html">Java
+      documentation</a>.
+
+   </li>
+
+   <li>
+
+     CS2J uses flexible XML translation templates to guide its translation of external calls. The provided translations for 
+     the <code class="prettyprint">System.Int32</code> class guide the translation of 
+     <code class="prettyprint">number.ToString(CultureInfo.InvariantCulture)</code> (IdentityTransformer.cs, line 34) to
+     <code class="prettyprint">NumberFormat.getInstance(LocaleSupport.INVARIANT).format(number)</code> 
+     (IdentityTransformer.java, line 35) and make sure the correct imports are added to the Java class.
+
+   </li>
+   <li>
+
+      Getter and Setter methods are automatically created for C# properties.  References
+      to properties are automatically converted to the appropriate setter/getter call.
+      See the translation for the Message property and its usage from StaticMessageTransformer.cs in
+      StaticMessageTransformer.java.
+
+   </li>
+   <li>
+
+     Delegates are fully supported.  In <code class="prettyprint">FizzBuzz.BusinessLogic.FizzBuzzLogic.java</code> 
+     (line 56) a delegate creation expression has been transformed 
+     to the creation of an anonymous object that supports the <code class="prettyprint">Predicate&lt;Integer&gt;
+     </code> interface (most importantly it has an <code class="prettyprint">invoke()</code> method that will
+     run the delegate code). More examples of delegate and event handling can be seen in the Delegates show case.
+
+   </li>
+   <li>
+
+      CS2J automatically adds the necessary methods to classes that implement the C# <code class="prettyprint">IEnumerable&lt;T&rt;</code> 
+      and <code class="prettyprint">ICollection&lt;T&rt;</code> interfaces so that they also support the corresponding
+      Java Iterable and Collection classes. An example of this is in <code class="prettyprint">FizzBuzz.Core.Range.java</code>
+      where an <code class="prettyprint">iterator()</code> has been added. Another example is shown in the Generics show case.
+
+   </li>
+
+</ul>  
+
+     There are many more interesting examples that you can find by studying this example. You can download the code
+     by right clicking on the top most folder. Both are runnable code.  For the Java code you will also need the
+     CS2JLibrary project which you can download as part of the 
+     <a href="{% url webapp.views.download %}">CS2J trial</a>..
+  
 {% endblock %}
 
 {% block license_popup_button %}
