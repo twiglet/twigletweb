@@ -1,0 +1,11 @@
+The C# code was written by Peter Sestoft and is available from http://www.dina.kvl.dk/~sestoft/gcsharp/index.html#collection
+
+There is no license given with the code, just the following announcement that you can find on that page.
+
+Authorship and legalese
+
+The sample programs shown here were developed by me while visiting Microsoft Research, Cambridge UK in October-December 2001.
+
+These programs are made available here in the hope that they will be interesting to look at, but without any warranty; without even the implied warranty of merchantability or fitness for a particular purpose. They are presented here solely to indicate some programming styles and potential uses of generics in C#. In particular, nobody assumes any responsibility for any legal or real consequences of using these sample programs.
+
+
