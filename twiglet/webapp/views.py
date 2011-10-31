@@ -50,8 +50,11 @@ def showcase_rustici(request):
 def showcase_dirtree_help(request):
     return render_to_response('twiglet/showcases/dirtree_help.html')
 
-def showcase_no_license(request):
+def showcase_license_none(request):
     return render_to_response('twiglet/showcases/license_none.html')
+
+def showcase_license_apache_20(request):
+    return render_to_response('twiglet/showcases/license_apache_20.html')
 
 
 ##
