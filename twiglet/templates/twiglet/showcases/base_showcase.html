@@ -124,7 +124,9 @@ $(document).ready(function(){
 
 
 <div align="right">
-<button type="button" class="popup" href="{% url webapp.views.showcase_no_license %}">copying</button>
+{% block license_popup_button %}
+<button type="button" class="popup" href="{% url webapp.views.showcase_license_none %}">copying</button>
+{% endblock %}
 <button type="button" class="popup" href="{% url webapp.views.showcase_dirtree_help %}">help</button>
 </div>
 </div>

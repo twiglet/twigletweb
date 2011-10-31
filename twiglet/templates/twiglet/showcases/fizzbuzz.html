@@ -6,3 +6,7 @@
    <li>CS2J transfers comments from the C# program into the Java code.  In addition, C# documentation comments are translated into Javadoc comments.  You can compare the <a href="/static/twiglet/showcasedoc/net/fizzbuzz/Index.html">C# documentation</a> to the <a href="/static/twiglet/showcasedoc/java/fizzbuzz/index.html">Java documentation</a>.</li>
 </ul>   
 {% endblock %}
+
+{% block license_popup_button %}
+<button type="button" class="popup" href="{% url webapp.views.showcase_license_apache_20 %}">copying</button>
+{% endblock %}
