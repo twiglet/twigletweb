@@ -91,10 +91,13 @@ function customMenu(node) {
 });
 
 $(document).ready(function(){
-           $("button").click(function () { 
+           $("button.is_popup").click(function () { 
                                $(this).interstitial('open', {'url' : $(this).attr('href'),
                                                              'width' : 500, 
                                                              'height' : 200});
+                             });
+           $("button.popup").click(function () { 
+                              window.open($(this).attr('href'));
                              })
          });
 
@@ -125,9 +128,9 @@ $(document).ready(function(){
 
 <div align="right">
 {% block license_popup_button %}
-<button type="button" class="popup" href="{% url webapp.views.showcase_license_none %}">copying</button>
+<button type="button" class="is_popup" href="{% url webapp.views.showcase_license_none %}">copying</button>
 {% endblock %}
-<button type="button" class="popup" href="{% url webapp.views.showcase_dirtree_help %}">help</button>
+<button type="button" class="is_popup" href="{% url webapp.views.showcase_dirtree_help %}">help</button>
 </div>
 </div>
 
