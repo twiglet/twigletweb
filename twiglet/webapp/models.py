@@ -5,7 +5,7 @@ from django.db import models
 class Contact(models.Model):
     name = models.CharField(max_length=50)
     email = models.EmailField()
-    phone = models.CharField(max_length=50)
+    phone = models.CharField(max_length=50, blank=True)
     comment = models.TextField()
     contact_date = models.DateTimeField('contact date', auto_now_add=True)
     def __unicode__(self):
@@ -14,7 +14,7 @@ class Contact(models.Model):
 class Download(models.Model):
     name = models.CharField(max_length=50)
     email = models.EmailField()
-    phone = models.CharField(max_length=50)
+    phone = models.CharField(max_length=50, blank=True)
     comment = models.TextField(blank=True)
     download_version = models.CharField(max_length=50, default="unknown")
     download_date = models.DateTimeField('download date', auto_now_add=True)
