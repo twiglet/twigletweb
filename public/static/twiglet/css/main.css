@@ -1428,8 +1428,8 @@ div#popupBlock .bodycontent {
    -khtml-border-radius: 7px; /* for old Konqueror browsers */
 }
 
-#contactform { width: 62%; height:100%; border: 0px solid red; float: left}
-#altcontacts { width: 35%; height:100%; border: 0px solid red; float: right}
+#contactform { width: 52%; height:100%; border: 0px solid red; float: left}
+#altcontacts { width: 45%; height:100%; border: 0px solid red; float: right}
 .clear { clear: both;}
 label.error { float: none; color: red; padding-left: .5em; vertical-align: top; }
 
