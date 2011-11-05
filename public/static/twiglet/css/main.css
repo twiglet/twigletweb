@@ -1401,11 +1401,11 @@ div#bottombanner {
 .checkback,.contactmsg {
     text-align:center;
     font-style:italic;
-    padding:10px 0 2px 0;
+    padding:20px 0 2px 0;
 }
 
 div.padit {
-    padding:20px;
+    padding:10px;
 }
 
 div#popupBlock .closelink {
