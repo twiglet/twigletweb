@@ -113,6 +113,7 @@ $(document).ready(function(){
 {% endblock %}
 </div>
 
+{% block thecode %} 
 <div class="codetreewrapper outline">
 
 <div class="kgcontainer">
@@ -133,6 +134,8 @@ $(document).ready(function(){
 <button type="button" class="is_popup" href="{% url webapp.views.showcase_dirtree_help %}">help</button>
 </div>
 </div>
+
+{% endblock thecode %}
 
 <div class="block_bottom contactmsg">
 </div>

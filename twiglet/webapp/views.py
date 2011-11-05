@@ -38,6 +38,11 @@ def showcase_helloworld(request):
     java_listing = get_file_tree_jstree(os.path.join(settings.TWIGLET_SHOWCASE_DIR, "code", "fizzbuzz", "java"), "fizzbuzz", "jnode", "java")
     return render_to_response('twiglet/showcases/fizzbuzz.html', {'csharp_tree_json': simplejson.dumps(csharp_listing), 'java_tree_json': simplejson.dumps(java_listing)})
 
+def showcase_showoff(request):
+##    csharp_listing = get_file_tree_jstree(os.path.join(settings.TWIGLET_SHOWCASE_DIR, "code", "fizzbuzz", "csharp"), "fizzbuzz", "csnode", "csharp")
+##    java_listing = get_file_tree_jstree(os.path.join(settings.TWIGLET_SHOWCASE_DIR, "code", "fizzbuzz", "java"), "fizzbuzz", "jnode", "java")
+    return render_to_response('twiglet/showcases/playground.html')
+
 def showcase_generics(request):
     csharp_listing = get_file_tree_jstree(os.path.join(settings.TWIGLET_SHOWCASE_DIR, "code", "generics", "csharp"), "generics", "csnode", "csharp")
     java_listing = get_file_tree_jstree(os.path.join(settings.TWIGLET_SHOWCASE_DIR, "code", "generics", "java"), "generics", "jnode", "java")

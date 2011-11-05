@@ -1,0 +1,47 @@
+{% extends "twiglet/showcases/base_showcase.html" %}
+
+
+{% block showcasedescription %}
+
+<em>Coming soon:</em> We will post some example code here showing how CS2J translates various interesting CS2J features.
+<p>
+<ul>
+   <li>
+
+     Trnaslations are <em>type-aware</em> so CS2J takes into account the types of method arguments when deciding if a translation is applicable.  CS2J can also handle methods with variable arguments.
+
+   </li>
+   <li>
+
+      In some circumstances CS2J will convert a case statement to a series of if-then-else tests (for example C# allows the
+      scrutinee expression in a case statement to be a String, but Java does not).
+ 
+   </li>
+   <li>
+
+     C# enums are converted to Java enums. In C# the programmer can assign numeric values to the members of the enumeration.
+     CS2J can emit dummy members of the Java enumeration so that the enum's ordinal value can be used as its value.
+ 
+   </li>
+
+   <li>
+      <code class="prettyprint">ref</code> and <code class="prettyprint">out</code> arguments are put in wrapper objects before
+      being passed and the generated code maintains the correct semantics.
+     
+   </li>
+   <li>
+
+     Similar to Properties, Indexers are converted to ordinary methods.
+
+   </li>
+   <li>
+
+     CS2J can give types to implicitly typed variables (e.g.,  <code class="prettyprint">var a = new[] { "hello", "CS2J", "fans" };</code> will declare  <code class="prettyprint">a</code> with type <code class="prettyprint">String[]</code>).
+
+   </li>
+
+</ul>  
+
+{% endblock %}
+
+{% block thecode %}{% endblock thecode %}
