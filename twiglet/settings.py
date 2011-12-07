@@ -1,10 +1,10 @@
 # Django settings for twiglet project.
 import os
 
-DEBUG = True
+DEBUG = False
 TEMPLATE_DEBUG = DEBUG
 
-TARGET = 'stage'
+TARGET = 'prod'
 SITE_ROOT= os.getcwd()
 
 ADMINS = (
