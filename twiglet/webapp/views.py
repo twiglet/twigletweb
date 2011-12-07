@@ -15,7 +15,7 @@ import simplejson
 from cStringIO import StringIO
 
 def home(request):
-    return render_to_response('twiglet/home.html')
+    return render_to_response('twiglet/home.html', {'debugstring':os.getcwd()})
 
 def how(request):
     return render_to_response('twiglet/how.html')

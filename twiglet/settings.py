@@ -1,7 +1,11 @@
 # Django settings for twiglet project.
+import os
 
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
+
+TARGET = 'stage'
+SITE_ROOT= os.getcwd()
 
 ADMINS = (
     ('Kevin Glynn', 'admin@twigletsoftware.com'),
@@ -16,7 +20,7 @@ SERVER_EMAIL = "website.error@twigletsoftware.com"
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql', # Add 'postgresql_psycopg2', 'postgresql', 'mysql', 'sqlite3' or 'oracle'.
-        'NAME': 'stage_django_twiglet',                      # Or path to database file if using sqlite3.
+        'NAME': TARGET + '_django_twiglet',                      # Or path to database file if using sqlite3.
         'USER': 'twigletsoftwarec',                      # Not used with sqlite3.
         'PASSWORD': '^nDdT6Rt',                  # Not used with sqlite3.
         'HOST': 'mysql.twigletsoftware.com',                      # Set to empty string for localhost. Not used with sqlite3.
@@ -49,7 +53,7 @@ USE_L10N = True
 
 # Absolute path to the directory that holds media.
 # Example: "/home/media/media.lawrence.com/"
-MEDIA_ROOT = '/home/kevingdevel/stage.twigletsoftware.com/public/media'
+MEDIA_ROOT = os.path.join(SITE_ROOT, 'public/media')
 
 # URL that handles the media served from MEDIA_ROOT. Make sure to use a
 # trailing slash if there is a path component (optional in other cases).
@@ -85,7 +89,7 @@ TEMPLATE_DIRS = (
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
-    "/home/kevingdevel/stage.twigletsoftware.com/twiglet/templates",
+    os.path.join(SITE_ROOT, "twiglet/templates"),
 )
 
 INSTALLED_APPS = (
@@ -102,9 +106,9 @@ INSTALLED_APPS = (
 
 ## twiglet settings
 TWIGLET_ASSETS_DIRS = (
-    "/home/kevingdevel/stage.twigletsoftware.com/twiglet/assets"
+    os.path.join(SITE_ROOT, "twiglet/assets")
     )
 
-TWIGLET_TRIAL_DIR = "/home/kevingdevel/stage.twigletsoftware.com/assets/cs2j/trial"
-TWIGLET_SHOWCASE_DIR = "/home/kevingdevel/stage.twigletsoftware.com/assets/cs2j/showcase"
+TWIGLET_TRIAL_DIR = os.path.join(SITE_ROOT, "assets/cs2j/trial")
+TWIGLET_SHOWCASE_DIR = os.path.join(SITE_ROOT, "assets/cs2j/showcase")
 
