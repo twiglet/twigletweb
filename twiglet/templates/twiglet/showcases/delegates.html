@@ -2,7 +2,7 @@
 
 
 {% block showcasedescription %}
-
+<p>
   This is sample code written by Twiglet Software to show off the translation of delegates and events into Java.
 <p>
   There is no direct equivalent to a delegate in Java.  Instead we translate delegates and events to objects with
@@ -19,15 +19,12 @@
   C# delegate instances can be combined and split up, 
   invoking a combined delegate instance invokes each of the contained delegates in turn. CS2J generates code to 
   wrap delegate instances in __Multi wrapper objects behind the scenes.
-<ul>
-
-</ul>  
-
+<p>
      There are many more interesting translations that you can find by studying these examples. You can download the code
      by right clicking on the top most folder. Both C# and Java files are runnable code.  For the Java code you will also need the
      CS2JLibrary project which you can download as part of the 
      <a href="{% url webapp.views.download %}">CS2J trial</a>.
-  
+<p> 
 {% endblock %}
 
 {% block license_popup_button %}
