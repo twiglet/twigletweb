@@ -2,16 +2,31 @@
 
 
 {% block showcasedescription %}
-  This is sample code written by Twiglet Software to show off the translation of delegates and events into Java.
 
+  This is sample code written by Twiglet Software to show off the translation of delegates and events into Java.
+<p>
+  There is no direct equivalent to a delegate in Java.  Instead we translate delegates and events to objects with
+  an <code class="prettyprint">Invoke()</code> method,  calls to the delegate are translated as calls to 
+  <code class="prettyprint">Invoke</code> on the Java object. 
+  
+<p>
+  A delegate declaration is translated to an interface declaration in Java. Delegate instances are translated as 
+  objects that implement the corresponding interface.  The interface ensures that the object supports an 
+  <code class="prettyprint">Invoke</code> method with the correct signature. A Java delegate instance is translated
+  to an instance of an anonymous class.  This object can capture variables in outer scopes just like a C# delegate.
+  CS2J supports both old fashioned explicit delegate creation and the nice syntax for lambda expressions. 
+<p>
+  C# delegate instances can be combined and split up, 
+  invoking a combined delegate instance invokes each of the contained delegates in turn. CS2J generates code to 
+  wrap delegate instances in __Multi wrapper objects behind the scenes.
 <ul>
 
 </ul>  
 
-     There are many more interesting translations that you can find by studying this example. You can download the code
-     by right clicking on the top most folder. Both are runnable code.  For the Java code you will also need the
+     There are many more interesting translations that you can find by studying these examples. You can download the code
+     by right clicking on the top most folder. Both C# and Java files are runnable code.  For the Java code you will also need the
      CS2JLibrary project which you can download as part of the 
-     <a href="{% url webapp.views.download %}">CS2J trial</a>..
+     <a href="{% url webapp.views.download %}">CS2J trial</a>.
   
 {% endblock %}
 
