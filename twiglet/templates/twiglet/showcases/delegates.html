@@ -1,1 +1,20 @@
 {% extends "twiglet/showcases/base_showcase.html" %}
+
+
+{% block showcasedescription %}
+  This is sample code written by Twiglet Software to show off the translation of delegates and events into Java.
+
+<ul>
+
+</ul>  
+
+     There are many more interesting translations that you can find by studying this example. You can download the code
+     by right clicking on the top most folder. Both are runnable code.  For the Java code you will also need the
+     CS2JLibrary project which you can download as part of the 
+     <a href="{% url webapp.views.download %}">CS2J trial</a>..
+  
+{% endblock %}
+
+{% block license_popup_button %}
+<button type="button" class="popup" href="{% url webapp.views.showcase_license_mit %}">copying</button>
+{% endblock %}

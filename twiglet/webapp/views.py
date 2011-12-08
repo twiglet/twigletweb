@@ -49,7 +49,9 @@ def showcase_generics(request):
     return render_to_response('twiglet/showcases/generics.html', {'csharp_tree_json': simplejson.dumps(csharp_listing), 'java_tree_json': simplejson.dumps(java_listing)})
 
 def showcase_delegates(request):
-    return render_to_response('twiglet/showcases/delegates.html')
+    csharp_listing = get_file_tree_jstree(os.path.join(settings.TWIGLET_SHOWCASE_DIR, "code", "delegates", "csharp"), "delegates", "csnode", "csharp")
+    java_listing = get_file_tree_jstree(os.path.join(settings.TWIGLET_SHOWCASE_DIR, "code", "delegates", "java"), "delegates", "jnode", "java")
+    return render_to_response('twiglet/showcases/delegates.html', {'csharp_tree_json': simplejson.dumps(csharp_listing), 'java_tree_json': simplejson.dumps(java_listing)})
 
 def showcase_rustici(request):
     return render_to_response('twiglet/showcases/rustici.html')
@@ -62,6 +64,9 @@ def showcase_license_none(request):
 
 def showcase_license_apache_20(request):
     return render_to_response('twiglet/showcases/license_apache_20.html')
+
+def showcase_license_mit(request):
+    return render_to_response('twiglet/showcases/license_mit.html')
 
 def showcase_license_sestoft(request):
     return render_to_response('twiglet/showcases/license_sestoft.html')
