@@ -4,7 +4,7 @@ from django.shortcuts import get_object_or_404, render_to_response
 from django.http import HttpResponseRedirect, HttpResponse
 from django.core.urlresolvers import reverse
 from django.template import RequestContext
-from django.core.mail import send_mail
+from django.core.mail import EmailMessage
 from django.http import Http404
 from webapp.forms import ContactForm, DownloadForm
 from webapp.utils import get_trial_version, get_file_tree, get_file_tree_jstree
@@ -84,12 +84,12 @@ def contact(request):
         if form.is_valid():
             form.save()
             cd = form.cleaned_data
-            send_mail(
-                "CS2J Online Contact from %s" % cd['name'],
-                "Name: %(name)s\nEmail: %(email)s\nPhone: %(phone)s\nMessage: %(comment)s" % cd,
-                cd.get('email'),
-                ['info+test@twigletsoftware.com'],
-            )
+            email = EmailMessage("CS2J Online Contact from %s" % cd['name'],
+                                 "Name: %(name)s\nEmail: %(email)s\nPhone: %(phone)s\nMessage: %(comment)s" % cd,
+                                 'forms@twigletsoftware.com',
+                                 ['info+test@twigletsoftware.com'],
+                                 headers = {'Reply-To':  cd.get('email')})
+            email.send()
             return HttpResponseRedirect(reverse('webapp.views.contact_thanks'))
     else:
         form = ContactForm()
