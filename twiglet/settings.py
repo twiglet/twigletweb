@@ -7,6 +7,13 @@ TEMPLATE_DEBUG = DEBUG
 TARGET = 'prod'
 SITE_ROOT= os.getcwd()
 
+EMAIL_USE_TLS = True
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = 'kevin.glynn@twigletsoftware.com'
+EMAIL_HOST_PASSWORD = 'l0nghlfll'
+EMAIL_PORT = 587
+
+
 ADMINS = (
     ('Kevin Glynn', 'admin@twigletsoftware.com'),
 )

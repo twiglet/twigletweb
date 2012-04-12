@@ -87,7 +87,7 @@ def contact(request):
             email = EmailMessage("CS2J Online Contact from %s" % cd['name'],
                                  "Name: %(name)s\nEmail: %(email)s\nPhone: %(phone)s\nMessage: %(comment)s" % cd,
                                  'forms@twigletsoftware.com',
-                                 ['info+test@twigletsoftware.com'],
+                                 ['info+contact@twigletsoftware.com'],
                                  headers = {'Reply-To':  cd.get('email')})
             email.send()
             return HttpResponseRedirect(reverse('webapp.views.contact_thanks'))
@@ -114,12 +114,13 @@ def download(request):
             download.download_version = get_trial_version()
             download.save()
             cd = form.cleaned_data
-            send_mail(
-                "CS2J Trial download by %s" % cd['name'],
-                "Name: %(name)s\nEmail: %(email)s\nPhone: %(phone)s\nVersion: %(download_version)s\nMessage: %(comment)s" % dict(download_version = get_trial_version(), **cd),
-                cd.get('email'),
-                ['info+test@twigletsoftware.com'],
-            )
+            email = EmailMessage("CS2J Trial download by %s" % cd['name'],
+                                 "Name: %(name)s\nEmail: %(email)s\nPhone: %(phone)s\nVersion: %(download_version)s\nMessage: %(comment)s" % dict(download_version = get_trial_version(), **cd),
+
+                                 'forms@twigletsoftware.com',
+                                 ['info+download@twigletsoftware.com'],
+                                 headers = {'Reply-To':  cd.get('email')})
+            email.send()
             request.session['allow_trial_download'] = True
             return HttpResponseRedirect(reverse('webapp.views.download_thanks'))
     else:
