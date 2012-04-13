@@ -9,8 +9,8 @@ SITE_ROOT= os.getcwd()
 
 EMAIL_USE_TLS = True
 EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_HOST_USER = 'kevin.glynn@twigletsoftware.com'
-EMAIL_HOST_PASSWORD = 'l0nghlfll'
+EMAIL_HOST_USER = 'cs2jcontact@twigletsoftware.com'
+EMAIL_HOST_PASSWORD = 'm3vK~+TR'
 EMAIL_PORT = 587
 
 
