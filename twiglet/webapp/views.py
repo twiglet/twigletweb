@@ -11,7 +11,7 @@ from webapp.utils import get_trial_version, get_file_tree, get_file_tree_jstree
 from django.core.servers.basehttp import FileWrapper
 
 import os, mimetypes, zipfile
-import simplejson
+import json
 from cStringIO import StringIO
 
 def home(request):
@@ -39,7 +39,7 @@ def privacy_policy(request):
 def showcase_helloworld(request):
     csharp_listing = get_file_tree_jstree(os.path.join(settings.TWIGLET_SHOWCASE_DIR, "code", "fizzbuzz", "csharp"), "fizzbuzz", "csnode", "csharp")
     java_listing = get_file_tree_jstree(os.path.join(settings.TWIGLET_SHOWCASE_DIR, "code", "fizzbuzz", "java"), "fizzbuzz", "jnode", "java")
-    return render_to_response('twiglet/showcases/fizzbuzz.html', {'csharp_tree_json': simplejson.dumps(csharp_listing), 'java_tree_json': simplejson.dumps(java_listing)})
+    return render_to_response('twiglet/showcases/fizzbuzz.html', {'csharp_tree_json': json.dumps(csharp_listing), 'java_tree_json': json.dumps(java_listing)})
 
 def showcase_showoff(request):
 ##    csharp_listing = get_file_tree_jstree(os.path.join(settings.TWIGLET_SHOWCASE_DIR, "code", "fizzbuzz", "csharp"), "fizzbuzz", "csnode", "csharp")
@@ -49,12 +49,12 @@ def showcase_showoff(request):
 def showcase_generics(request):
     csharp_listing = get_file_tree_jstree(os.path.join(settings.TWIGLET_SHOWCASE_DIR, "code", "generics", "csharp"), "generics", "csnode", "csharp")
     java_listing = get_file_tree_jstree(os.path.join(settings.TWIGLET_SHOWCASE_DIR, "code", "generics", "java"), "generics", "jnode", "java")
-    return render_to_response('twiglet/showcases/generics.html', {'csharp_tree_json': simplejson.dumps(csharp_listing), 'java_tree_json': simplejson.dumps(java_listing)})
+    return render_to_response('twiglet/showcases/generics.html', {'csharp_tree_json': json.dumps(csharp_listing), 'java_tree_json': json.dumps(java_listing)})
 
 def showcase_delegates(request):
     csharp_listing = get_file_tree_jstree(os.path.join(settings.TWIGLET_SHOWCASE_DIR, "code", "delegates", "csharp"), "delegates", "csnode", "csharp")
     java_listing = get_file_tree_jstree(os.path.join(settings.TWIGLET_SHOWCASE_DIR, "code", "delegates", "java"), "delegates", "jnode", "java")
-    return render_to_response('twiglet/showcases/delegates.html', {'csharp_tree_json': simplejson.dumps(csharp_listing), 'java_tree_json': simplejson.dumps(java_listing)})
+    return render_to_response('twiglet/showcases/delegates.html', {'csharp_tree_json': json.dumps(csharp_listing), 'java_tree_json': json.dumps(java_listing)})
 
 def showcase_rustici(request):
     return render_to_response('twiglet/showcases/rustici.html')
@@ -163,7 +163,7 @@ def util_display(request, project, fname):
     
         listing = get_file_tree_jstree(os.path.join(settings.TWIGLET_SHOWCASE_DIR, "code", my_project, my_dirname), project, fname)
         ##listing_ul = tree_to_ul(listing)
-        return render_to_response('twiglet/display_tree.html', {'tree_json': simplejson.dumps(listing)})
+        return render_to_response('twiglet/display_tree.html', {'tree_json': json.dumps(listing)})
     except Exception:
         ## todo
         raise

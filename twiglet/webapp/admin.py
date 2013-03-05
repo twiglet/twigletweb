@@ -1,3 +1,10 @@
+import sys
+import os
+
+sys.path += [os.path.join(os.path.dirname(__file__), "..")]
+
+#from twiglet.webapp.models import Contact
+#from twiglet.webapp.models import Download
 from webapp.models import Contact
 from webapp.models import Download
 from django.contrib import admin
