@@ -7,7 +7,7 @@ from django.template import RequestContext
 from django.core.mail import EmailMessage
 from django.http import Http404
 from webapp.forms import ContactForm, DownloadForm
-from webapp.utils import get_trial_version, get_file_tree, get_file_tree_jstree
+from webapp.utils import get_active_version, get_file_tree, get_file_tree_jstree
 from django.core.servers.basehttp import FileWrapper
 
 import os, mimetypes, zipfile
@@ -82,10 +82,12 @@ def contact(request):
     if request.method == 'POST':
         form = ContactForm(request.POST)
         if form.is_valid():
-            form.save()
+            contact=form.save(commit=False)
+            contact.contact_version = get_active_version()
+            contact.save()
             cd = form.cleaned_data
             email = EmailMessage("CS2J Online Contact from %s" % cd['name'],
-                                 "Name: %(name)s\nEmail: %(email)s\nPhone: %(phone)s\nMessage: %(comment)s" % cd,
+                                 "Name: %(name)s\nEmail: %(email)s\nPhone: %(phone)s\nVersion: %(contact_version)s\nMessage: %(comment)s" % dict(contact_version = get_active_version(), **cd),
                                  'cs2jcontact@twigletsoftware.com',
                                  ['kevin.glynn+contact@twigletsoftware.com'],
                                  headers = {'Reply-To':  cd.get('email')})
@@ -107,15 +109,14 @@ def contact_thanks(request):
 ##
 def download(request):
     if request.method == 'POST':
-##        form = DownloadForm(dict(download_version = get_trial_version(), **request.POST))
         form = DownloadForm(request.POST)
         if form.is_valid():
             download=form.save(commit=False)
-            download.download_version = get_trial_version()
+            download.download_version = get_active_version()
             download.save()
             cd = form.cleaned_data
             email = EmailMessage("CS2J Trial download by %s" % cd['name'],
-                                 "Name: %(name)s\nEmail: %(email)s\nPhone: %(phone)s\nVersion: %(download_version)s\nMessage: %(comment)s" % dict(download_version = get_trial_version(), **cd),
+                                 "Name: %(name)s\nEmail: %(email)s\nPhone: %(phone)s\nVersion: %(download_version)s\nMessage: %(comment)s" % dict(download_version = get_active_version(), **cd),
 
                                  'cs2jcontact@twigletsoftware.com',
                                  ['kevin.glynn+download@twigletsoftware.com'],

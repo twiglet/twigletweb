@@ -10,14 +10,14 @@ from webapp.models import Download
 from django.contrib import admin
 
 class ContactAdmin(admin.ModelAdmin):
-    list_display = ('name', 'email', 'contact_date')
+    list_display = ('name', 'email', 'contact_date' 'contact_version')
     readonly_fields = ('contact_date',)
 
 admin.site.register(Contact, ContactAdmin)
 
 
 class DownloadAdmin(admin.ModelAdmin):
-    list_display = ('name', 'email', 'download_date')
+    list_display = ('name', 'email', 'download_date', 'download_version')
     readonly_fields = ('download_date',)
     
 admin.site.register(Download, DownloadAdmin)

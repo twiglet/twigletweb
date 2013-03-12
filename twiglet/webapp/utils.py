@@ -5,7 +5,7 @@ from django.core.urlresolvers import reverse
 import os
 import re
 
-def get_trial_version():
+def get_active_version():
     """
     Get the version of the curent trial.  If file trial_version.txt exists then use
     contents.

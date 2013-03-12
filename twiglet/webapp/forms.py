@@ -5,7 +5,7 @@ from webapp.models import Download
 class ContactForm(ModelForm):
     class Meta:
         model = Contact
-        exclude = ('contact_date',)
+        exclude = ('contact_date', 'contact_version')
         widgets = {
             'name': TextInput(attrs={'size': 30, 'minlength' : 3, 'class' : 'entrybox round required'}),
             'email': TextInput(attrs={'size': 30, 'class' : 'entrybox round required email'}),
