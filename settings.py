@@ -1,6 +1,7 @@
 # Django settings for twiglet project.
 import os
 from djangoappengine.settings_base import *
+import secrets
 
 DEBUG = False
 TEMPLATE_DEBUG = DEBUG
@@ -9,22 +10,15 @@ TARGET = 'prod'
 ##SITE_ROOT= os.getcwd()
 SITE_ROOT= os.path.dirname(__file__)
 
-EMAIL_USE_TLS = True
-EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_HOST_USER = 'cs2jcontact@twigletsoftware.com'
-EMAIL_HOST_PASSWORD = 'm3vK~+TR'
-EMAIL_PORT = 587
-
-
 ADMINS = (
-    ('Kevin Glynn', 'admin@twigletsoftware.com'),
+    ('Kevin Glynn', 'kevin.glynn@twigletsoftware.com'),
 )
 
 MANAGERS = ADMINS
 
 SEND_BROKEN_LINK_EMAILS = True
 
-SERVER_EMAIL = "website.error@twigletsoftware.com"
+SERVER_EMAIL = "kevin.glynn+website.error@twigletsoftware.com"
 
 # Activate django-dbindexer for the default database
 DATABASES['native'] = DATABASES['default']
@@ -81,7 +75,7 @@ MEDIA_URL = '/media/'
 ADMIN_MEDIA_PREFIX = '/media/'
 
 # Make this unique, and don't share it with anybody.
-SECRET_KEY = '4xkgl!ec3a_!f5u29am9*bpuy%+r+8t2u=s(5azy4f2q!j*^h1'
+SECRET_KEY = secrets.SECRET_KEY
 
 # List of callables that know how to import templates from various sources.
 TEMPLATE_LOADERS = (
