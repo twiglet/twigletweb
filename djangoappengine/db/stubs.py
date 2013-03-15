@@ -3,8 +3,6 @@ import os
 import time
 from urllib2 import HTTPError, URLError
 
-from google.appengine.ext.testbed import Testbed
-
 from ..boot import PROJECT_DIR
 from ..utils import appid, have_appserver
 
@@ -29,7 +27,6 @@ def rpc_server_factory(*args, ** kwargs):
 class StubManager(object):
 
     def __init__(self):
-        self.testbed = Testbed()
         self.active_stubs = None
         self.pre_test_stubs = None
 
@@ -40,6 +37,9 @@ class StubManager(object):
             self.setup_local_stubs(connection)
 
     def activate_test_stubs(self, connection):
+        from google.appengine.ext.testbed import Testbed
+        self.testbed = Testbed()
+
         if self.active_stubs == 'test':
             return
 
