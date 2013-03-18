@@ -26,6 +26,14 @@ handlers:
   static_dir: django/contrib/admin/media
   expiration: '0'
 
+- url: /favicon.ico
+  static_files: public/favicon.ico
+  upload: static/favicon.ico
+
+- url: /robots.txt
+  static_files: public/robots.txt
+  upload: public/robots.txt
+
 - url: /static
   static_dir: public/static
 
