@@ -12,14 +12,14 @@ def get_active_version():
     Otherwise look for all files, find largest version number and use that.
     """
     version = 'unknown'
-    if os.path.isfile(os.path.join(settings.TWIGLET_TRIAL_DIR, "trial_version.txt")):
-        version_file = open(os.path.join(settings.TWIGLET_TRIAL_DIR, "trial_version.txt"), 'r')
+    if os.path.isfile(os.path.join(settings.TWIGLET_RELEASE_DIR, "version.txt")):
+        version_file = open(os.path.join(settings.TWIGLET_RELEASE_DIR, "version.txt"), 'r')
         version = version_file.readline().strip()
     else:
-        fnames = os.listdir(settings.TWIGLET_TRIAL_DIR)
+        fnames = os.listdir(settings.TWIGLET_RELEASE_DIR)
         ## go through the list looking for trial archives, extract version number and remember biggest
-        ## e.g. cs2j-trial110323-a.zip
-        pat = re.compile('cs2j-trial(?:-)(.*).zip')
+        ## e.g. cs2j-110323-a.zip
+        pat = re.compile('cs2j-(?:-)(.*).zip')
         for fname in fnames:
            m = pat.search(fname)
            if m and (version == 'unknown' or m.group(1) > version):

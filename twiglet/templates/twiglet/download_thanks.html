@@ -1,14 +1,67 @@
 {% extends "twiglet/base_generic.html" %}
 
+{% block loadscriptfiles %}
+<script type="text/javascript" src="/static/twiglet/js/jquery.validate-1.8.1.min.js"></script>
+{% endblock%}
+
+{% block jquery %}
+<script>
+  $(document).ready(function(){
+    $("label:not(.error)").append(":");
+    $("#downloadForm").validate();
+  });
+</script>
+{% endblock %}
+
 {% block title %}Thanks{% endblock title %}
 
-{% block body %}
-<br />
-Thank you for your downloading CS2J.  Your download should start
-automatically, if not <a href="{% url webapp.views.download_trial %}">Click Here</a>.
-<br />
 
-<iframe src="{% url webapp.views.download_trial %}" style="display:none;" />
+{% block body %}
+<div align="center">
+Thank you for your downloading CS2J.  Your download should start
+automatically, if not <a href="{% url webapp.views.download_release %}">Click Here</a>.
+</div>
+<div class="kgcontainer standoutblock padtext">
+
+We love hearing about the uses people have found for CS2J and would
+appreciate it if you could fill in the form below with some brief
+information about what you plan to do with CS2J. 
+<p>
+If you want to contact the people behind CS2J then you can use the information on the
+<a href="{% url webapp.views.contact %}">Contact</a> Page.
+
+<p>
+
+<form class="cmxform" id="downloadForm" method="post" action="">
+  {% csrf_token %}
+  <fieldset>
+    <label for="cname">Name<sup>*</sup></label>
+     {{ form.name }}
+     {% for error in form.name.errors %}
+        <label for="id_name" generated="true" class="error">{{ error|escape }}</label>
+     {% endfor %}
+ </p>
+   <p>
+     <label for="cemail">Email<sup>*</sup></label>
+     {{ form.email }}
+     {% for error in form.email.errors %}
+        <label for="id_email" generated="true" class="error">{{ error|escape }}</label>
+     {% endfor %}
+ </p>
+    <label for="ccomment">Message</label><br/>
+     {{ form.comment }}
+     {% for error in form.comment.errors %}
+        <label for="id_comment" generated="true" class="error">{{ error|escape }}</label>
+     {% endfor %}
+   <p>
+     <input class="submit button" style="color:white" type="submit" value="Submit"/>
+   </p>
+ </fieldset>
+</form>
+</div>
+<br/>
+
+<iframe src="{% url webapp.views.download_release %}" style="display:none;" />
 
 {% endblock body %}
 

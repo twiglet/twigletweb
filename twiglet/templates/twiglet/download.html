@@ -1,81 +1,30 @@
 {% extends "twiglet/base_generic.html" %}
 
-{% block loadscriptfiles %}
-<script type="text/javascript" src="/static/twiglet/js/jquery.validate-1.8.1.min.js"></script>
-{% endblock%}
-
-{% block jquery %}
-<script>
-  $(document).ready(function(){
-    $("label:not(.error)").append(":");
-    $("#downloadForm").validate();
-  });
-</script>
-{% endblock %}
-
-{% block title %}Download a trial{% endblock title %}
+{% block title %}Download CS2J{% endblock title %}
 
 {% block body %}
 
-<div class="kgcontainer">
-<div class="leftcolumntwo standoutblock">
+<div class="standoutblock kgcontainer">
+<div class="leftcolumntwo">
+   <h2 class="bold" align="center">Download the latest CS2J Release</h2>
 
-Download a trial version of CS2J and try it on your own code.  The
-trial version has three restrictions, compared to the full version:
-<ul>
-  <li>It just shows the first 120 lines of each class.</li>
-  <li>Each translation template is digitally signed.  You can add and
-  / or modify up to five of the translation templates.</li>
-  <li>The trial version is usually a little out of date, and is
-  missing features and bug fixes from the full version</li>
-</ul>
-The trial version will give you a good idea of the
-quality of translation you can expect from the full CS2J product and
-allows you to play with the translation templates.
-<p>
-To download the trial version just provide your name, email
-address and (optionally) a short description of your translation
-needs, then the download will start straight away.
+CS2J is a windows executable.  It runs on other platforms if you first install <a href="http://www.go-mono.com/mono-downloads/download.html">mono</a>.
+Download the latest version of CS2J and try it on your own code.  
+  <div align="center">
+  <div class="button" target="{% url webapp.views.download_thanks %}">
+  <div class="buttonfiller">
+    Download CS2J
+  </div>
+  </div>
+  </div>
+</p>
 </div>
 
 <div class="rightcolumntwo">
+   <h2 class="bold" align="center">Go to the Source (code)</h2>
 
-<form class="cmxform" id="downloadForm" method="post" action="">
-  {% csrf_token %}
-  <fieldset>
-    <label for="cname">Name<sup>*</sup></label>
-     {{ form.name }}
-     {% for error in form.name.errors %}
-        <label for="id_name" generated="true" class="error">{{ error|escape }}</label>
-     {% endfor %}
- </p>
-   <p>
-     <label for="cemail">Email<sup>*</sup></label>
-     {{ form.email }}
-     {% for error in form.email.errors %}
-        <label for="id_email" generated="true" class="error">{{ error|escape }}</label>
-     {% endfor %}
- </p>
-   <p>
-     <label for="cphone">Phone</label>
-     {{ form.phone }}
-     {% for error in form.phone.errors %}
-        <label for="id_phone" generated="true" class="error">{{ error|escape }}</label>
-     {% endfor %}
- </p>
-   <p>
-    <label for="ccomment">Your comment</label><br />
-     {{ form.comment }}
-     {% for error in form.comment.errors %}
-        <label for="id_comment" generated="true" class="error">{{ error|escape }}</label>
-     {% endfor %}
-  </p>
-   <p>
-     <input class="submit button" style="color:white" type="submit" value="Download Trial"/>
-   </p>
- </fieldset>
-</form>
-
+The code to CS2J and CS2JLibrary are available from github. Come and help us make CS2J better. You can browse or clone the current contents of the git repository using the <a href="https://github.com/twiglet/cs2j">web interface</a>.
+<p>  
 </div>
 </div>
 

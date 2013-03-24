@@ -105,9 +105,26 @@ def contact_thanks(request):
 ##
 
 ##
-## Download Form
+## Download Gubbins
 ##
+
 def download(request):
+    return render_to_response('twiglet/download.html')
+
+
+def download_release(request):
+    ## Send a file through Django without loading the whole file into              
+    ## memory at once. The FileWrapper will turn the file object into an           
+    ## iterator for chunks of 8KB.                                                 
+    filename = settings.TWIGLET_RELEASE_DIR + '/cs2j-latest.zip' # Select your file here.                                
+    wrapper = FileWrapper(file(filename))
+    response = HttpResponse(wrapper, content_type='application/zip')
+    response['Content-Disposition'] = 'attachment; filename=cs2j-latest.zip'
+    response['Content-Length'] = os.path.getsize(filename)
+    response['fred'] = filename
+    return response
+
+def download_thanks(request):
     if request.method == 'POST':
         form = DownloadForm(request.POST)
         if form.is_valid():
@@ -115,7 +132,7 @@ def download(request):
             download.download_version = get_active_version()
             download.save()
             cd = form.cleaned_data
-            email = EmailMessage("CS2J Trial download by %s" % cd['name'],
+            email = EmailMessage("CS2J download by %s" % cd['name'],
                                  "Name: %(name)s\nEmail: %(email)s\nPhone: %(phone)s\nVersion: %(download_version)s\nMessage: %(comment)s" % dict(download_version = get_active_version(), **cd),
 
                                  'cs2jcontact@twigletsoftware.com',
@@ -123,30 +140,13 @@ def download(request):
                                  headers = {'Reply-To':  cd.get('email')})
             email.send()
             request.session['allow_trial_download'] = True
-            return HttpResponseRedirect(reverse('webapp.views.download_thanks'))
+            return HttpResponseRedirect(reverse('webapp.views.download_thanks_thanks'))
     else:
         form = DownloadForm()
-    return render_to_response('twiglet/download_form.html', {'form': form}, context_instance=RequestContext(request))
-
-def download_thanks(request):
-    if request.session.get('allow_trial_download', False):
-        return render_to_response('twiglet/download_thanks.html')
-    else:
-        return HttpResponseRedirect(reverse('webapp.views.download'))
+    return render_to_response('twiglet/download_thanks.html', {'form': form}, context_instance=RequestContext(request))
         
-def download_trial(request):
-    if request.session.get('allow_trial_download', False):
-        ## Send a file through Django without loading the whole file into              
-        ## memory at once. The FileWrapper will turn the file object into an           
-        ## iterator for chunks of 8KB.                                                 
-        filename = settings.TWIGLET_TRIAL_DIR + '/cs2j-trial-latest.zip' # Select your file here.                                
-        wrapper = FileWrapper(file(filename))
-        response = HttpResponse(wrapper, content_type='application/zip')
-        response['Content-Disposition'] = 'attachment; filename=cs2j-trial-latest.zip'
-        response['Content-Length'] = os.path.getsize(filename)
-        return response
-    else:
-        return HttpResponseRedirect(reverse('webapp.views.download'))
+def download_thanks_thanks(request):
+    return render_to_response('twiglet/download_thanks_thanks.html')
 
 ##
 ##
