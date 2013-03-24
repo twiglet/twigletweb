@@ -114,6 +114,6 @@ TWIGLET_ASSETS_DIRS = (
     os.path.join(SITE_ROOT, "twiglet/assets")
     )
 
-TWIGLET_TRIAL_DIR = os.path.join(SITE_ROOT, "assets/cs2j/trial")
+TWIGLET_RELEASE_DIR = os.path.join(SITE_ROOT, "assets/cs2j/release")
 TWIGLET_SHOWCASE_DIR = os.path.join(SITE_ROOT, "assets/cs2j/showcase")
 
