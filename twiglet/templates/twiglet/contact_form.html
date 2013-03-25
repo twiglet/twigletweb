@@ -38,13 +38,6 @@
      {% endfor %}
    </p>
    <p>
-     <label for="cphone">Phone</label>
-     {{ form.phone }}
-     {% for error in form.phone.errors %}
-        <label for="id_phone" generated="true" class="error">{{ error|escape }}</label>
-     {% endfor %}
-   </p>
-   <p>
     <label for="ccomment">Your comment<sup>*</sup></label><br />
      {{ form.comment }}
      {% for error in form.comment.errors %}

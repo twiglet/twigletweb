@@ -28,7 +28,7 @@ appreciate it if you could fill in the form below with some brief
 information about what you plan to do with CS2J. 
 <p>
 If you want to contact the people behind CS2J then you can use the information on the
-<a href="{% url webapp.views.contact %}">Contact</a> Page.
+<a href="{% url webapp.views.contact %}">Contact</a> Page or try the <a href="{% url webapp.views.forums %}">User Forums</a>.
 
 <p>
 
@@ -40,19 +40,21 @@ If you want to contact the people behind CS2J then you can use the information o
      {% for error in form.name.errors %}
         <label for="id_name" generated="true" class="error">{{ error|escape }}</label>
      {% endfor %}
- </p>
+   </p>
    <p>
      <label for="cemail">Email<sup>*</sup></label>
      {{ form.email }}
      {% for error in form.email.errors %}
         <label for="id_email" generated="true" class="error">{{ error|escape }}</label>
      {% endfor %}
- </p>
+   </p>
+   <p>
     <label for="ccomment">Message</label><br/>
      {{ form.comment }}
      {% for error in form.comment.errors %}
         <label for="id_comment" generated="true" class="error">{{ error|escape }}</label>
      {% endfor %}
+   </p>
    <p>
      <input class="submit button" style="color:white" type="submit" value="Submit"/>
    </p>

@@ -29,6 +29,9 @@ def cs2jdocumentation(request):
 def showcase(request):
     return render_to_response('twiglet/showcase.html')
 
+def forums(request):
+    return render_to_response('twiglet/forums.html')
+
 def privacy_policy(request):
     return render_to_response('twiglet/privacy.html')
 
